@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url(font/Ubuntu/Ubuntu-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url(font/Prompt/Prompt-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt";
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  z-index: 1;
+  background-color: white;
+  border-bottom: 2px solid black;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/*sidebar starts here*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: greenyellow;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+
+.sidebar-btn, .closebtn {
+  cursor: pointer;
+}
+
+.sidebar .nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  padding: 20px;
+}
+.sidebar .nav-top img {
+  display: block;
+}
+
+.sidebar .nav-list {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: inherit;
+  li {
+    list-style-type: none;
+  }
+}
+/*sidebar ends here*/
+
+
+/*main page starts here*/
+.main-page {
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-page .header-placeholder {
+  width: 100%;
+  height: 70px;
+}
+.main-page .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 100%;
+  padding: 20px;/* dont delete this important line lmao */
+}
+
+.main-page .viewcard {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+
+}
+
+.main-page .viewcard:hover {
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+
+  .card-image {
+    transform: scale(1.2);
+  }
+}
+
+.main-page .viewcard .card-image {
+  position: absolute;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.main-page .card-name {
+  background-color: white;
+  width: 100%;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*mobile screen */
+@media only screen and (max-width: 480px) {
+  .main-page {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+/*tablet screen*/
+@media only screen and (min-width: 481px) and (max-width: 960px){
+  .main-page {
+    background-color: blue;
+  }
+
+  .sidebar-btn, .search-btn {
+    width: 40px;
+  }
+
+  .nav-top img {
+    height: 40px;
+  }
+
+  .main-page .header-placeholder {
+    height: 80px;
+  }
+
+  .main-page .viewcard {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+/*desktop screen*/
+@media only screen and (min-width: 961px) {
+  .main-page {
+    background-color: rgb(255, 255, 255);
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .main-page .section {
+    width: 33%;
+  }
+
+  .text-logo {
+    width: 200px;
+  }
+
+  .sidebar-btn, .search-btn {
+    width: 50px;
+  }
+
+  .nav-top img {
+    height: 50px;
+  }
+
+  .main-page .header-placeholder {
+    height: 90px;
+  }
+
+  .main-page .viewcard {
+    height: 250px;
+    width: 250px;
+  }
+}

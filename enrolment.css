@@ -1,0 +1,46 @@
+.step-container {
+  display: block;
+  width: 100%;
+  margin: 0 10px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  padding-left: 50px;
+  font-size: 1.2em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.step:first-of-type {
+  border-top: none;
+}
+
+.radio-container {
+  position: absolute;
+  left: 5px;
+}
+
+.radio-btn {
+  display: block;
+  height: 30px;
+  width: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container-two,
+.container-three,
+.container-four,
+.container-five,
+.container-six,
+.container-seven,
+.container-eight,
+.container-nine {
+  opacity: 0.2;
+}
