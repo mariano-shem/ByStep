@@ -106,7 +106,20 @@ currentStep.forEach(el => el.addEventListener("change", event => {
 }));
 
   
-  
+//expanding a step and showing addtl. content
+var expandStep = document.querySelectorAll(".radio-label");
+
+for(i = 0; i < expandStep.length; i++) {
+  expandStep[i].addEventListener("click", function() {
+    this.classList.toggle("expand");
+    var stepContent = this.nextElementSibling;
+      if (stepContent.style.maxHeight) {
+        stepContent.style.maxHeight = null;
+      } else {
+        stepContent.style.maxHeight = stepContent.scrollHeight + "px";
+      }
+  });
+}
 
 
 

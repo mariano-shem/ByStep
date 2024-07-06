@@ -5,16 +5,10 @@
 }
 
 .step {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   padding: 10px 0;
-  padding-left: 50px;
   font-size: 1.2em;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  cursor: pointer;
 }
 
 .step:first-of-type {
@@ -23,7 +17,7 @@
 
 .radio-container {
   position: absolute;
-  left: 5px;
+  left: 15px;
 }
 
 .radio-btn {
@@ -43,4 +37,70 @@
 .container-eight,
 .container-nine {
   opacity: 0.3;
+}
+
+.step-title {
+  width: inherit;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.radio-label {
+  background-color: rgb(156, 156, 156);
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+.step-collapsible {
+  max-height: 0;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  background-color: rgb(255, 182, 182);
+  transition: max-height 0.5s ease-out;
+}
+
+.step-collapsible .step-location,
+.step-collapsible .step-requirement,
+.step-collapsible .step-process {
+  border-top: 1px solid black;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.expand, .radio-label:hover {
+  background-color: rgb(131, 131, 131);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*tablet mode*/
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+
+}
+
+
+/*desktop mode*/
+@media only screen and (min-width: 961px) {
+  .step-title {
+    border-bottom: 1px solid black;
+  }
+  
+  .step-collapsible .step-location,
+  .step-collapsible .step-requirement,
+  .step-collapsible .step-process {
+    border-top: none;
+    border-left: 1px solid black;
+    padding-left: 10px;
+    width: 33%;
+  }
 }
