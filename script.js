@@ -5,15 +5,12 @@ function openNav() {
 
   if (w <=480) {
     document.getElementById("sidebar-id").style.width = "200px";
-    document.getElementById("sidebar-id").style.backgroundColor = "red";
   }
   else if (w > 480 && w < 961) {
     document.getElementById("sidebar-id").style.width = "250px";
-    document.getElementById("sidebar-id").style.backgroundColor = "blue";
   }
   else {
     document.getElementById("sidebar-id").style.width = "350px";
-    document.getElementById("sidebar-id").style.backgroundColor = "green";
   }
 
 }
@@ -29,7 +26,8 @@ var currentStep = document.querySelectorAll(".radio-btn");
 currentStep.forEach(el => el.addEventListener("change", event => {
   var currentButton = event.target.value;
   var nextStep;
-  var nextButton;
+  var autoExpand;
+  var autoClose;
 
   switch(currentButton) {
     case "BoxOne":
@@ -37,6 +35,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxTwo":
@@ -44,6 +50,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxThree":
@@ -51,6 +65,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxFour":
@@ -58,6 +80,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxFive":
@@ -65,6 +95,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxSix":
@@ -72,6 +110,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxSeven":
@@ -79,6 +125,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxEight":
@@ -86,6 +140,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxNine":
@@ -93,6 +155,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
     case "BoxTen":
@@ -100,6 +170,14 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+
+        /*automatic expand, remove at will*/
+        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
+
+        /*automatic close previous step, remove at will*/
+        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose.style.maxHeight = null;
       }
       break;
   }
@@ -114,11 +192,9 @@ for(i = 0; i < expandStep.length; i++) {
     this.classList.toggle("expand");
     var stepContent = this.nextElementSibling;
       if (stepContent.style.maxHeight) {
-        stepContent.style.borderTop = "none";
         stepContent.style.maxHeight = null;
       } else {
         stepContent.style.maxHeight = stepContent.scrollHeight + "px";
-        stepContent.style.borderTop = "1px solid black";
       }
   });
 }

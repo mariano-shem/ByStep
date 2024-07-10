@@ -1,19 +1,35 @@
-@font-face {
-  font-family: "Ubuntu";
-  src: url(font/Ubuntu/Ubuntu-Regular.ttf);
-  font-weight: normal;
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: "Prompt";
-  src: url(font/Prompt/Prompt-Regular.ttf);
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/*FONT ENDS HERE*/
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Prompt";
+  font-family: "Poppins";
+  font-weight: 400;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -48,9 +64,10 @@ a {
   display: block;
   height: 100%;
   width: 0;
-  background-color: greenyellow;
+  background-color: rgb(255, 255, 255);
   transition: 0.5s;
   overflow-x: hidden;
+  border: 1px solid black;
 }
 
 .sidebar-btn, .closebtn {
@@ -61,8 +78,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
-  background-color: white;
+  border-bottom: 2px solid black;
+  background-color: rgb(255, 223, 223);
   padding: 20px;
 }
 .sidebar .nav-top img {
@@ -142,6 +159,10 @@ a {
   align-items: center;
   height: 25%;
   z-index: 1;
+
+  h3 {
+    font-weight: 700;
+  }
 }
 
 
@@ -166,9 +187,6 @@ a {
 
 /*tablet screen*/
 @media only screen and (min-width: 481px) and (max-width: 960px){
-  .main-page {
-    background-color: rgb(228, 228, 228);
-  }
 
   .sidebar-btn, .search-btn {
     width: 40px;
@@ -191,7 +209,6 @@ a {
 /*desktop screen*/
 @media only screen and (min-width: 961px) {
   .main-page {
-    background-color: rgb(200, 200, 200);
     width: 960px;
     margin: 0 auto;
   }

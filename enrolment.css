@@ -9,7 +9,6 @@
   font-size: 1.2em;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  background-color: rgb(211, 211, 211);
 }
 
 .step:first-of-type {
@@ -51,6 +50,9 @@
   cursor: pointer;
   width: 100%;
   user-select: none;
+  p {
+    font-weight: 700;
+  }
 }
 
 .step-collapsible {
@@ -65,10 +67,14 @@
 .step-collapsible .step-location,
 .step-collapsible .step-requirement,
 .step-collapsible .step-process {
-  border-top: 1px solid black;
-  padding: 5px 0;
+  border: 1px solid black;
+  background-color: rgb(245, 245, 245);
+  padding: 5px;
   width: 100%;
   user-select: none;
+  margin: 4px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .expand, .step-title:hover {
@@ -98,9 +104,9 @@
   .step-collapsible .step-location,
   .step-collapsible .step-requirement,
   .step-collapsible .step-process {
-    border-top: none;
-    border-left: 1px solid black;
-    padding-left: 10px;
-    width: 33%;
+    width: 30%;
+    margin: auto 1%;
+    display: flex;
+    justify-content: center;
   }
 }
