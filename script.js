@@ -35,6 +35,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -50,6 +51,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -65,6 +67,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -80,6 +83,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -95,6 +99,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -110,6 +115,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -125,6 +131,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -140,6 +147,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -155,6 +163,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -170,6 +179,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
+        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -193,8 +203,10 @@ for(i = 0; i < expandStep.length; i++) {
     var stepContent = this.nextElementSibling;
       if (stepContent.style.maxHeight) {
         stepContent.style.maxHeight = null;
+        this.style.marginBottom = "0";
       } else {
         stepContent.style.maxHeight = stepContent.scrollHeight + "px";
+        this.style.marginBottom = "5px";
       }
   });
 }
