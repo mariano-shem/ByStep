@@ -114,9 +114,11 @@ for(i = 0; i < expandStep.length; i++) {
     this.classList.toggle("expand");
     var stepContent = this.nextElementSibling;
       if (stepContent.style.maxHeight) {
+        stepContent.style.borderTop = "none";
         stepContent.style.maxHeight = null;
       } else {
         stepContent.style.maxHeight = stepContent.scrollHeight + "px";
+        stepContent.style.borderTop = "1px solid black";
       }
   });
 }
