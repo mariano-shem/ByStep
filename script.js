@@ -4,23 +4,23 @@ function openNav() {
   let w = document.documentElement.clientWidth || window.innerWidth;
 
   if (w <=480) {
-    document.getElementById("sidebar-id").style.width = "200px";
+    document.querySelector("#sidebar-id").style.width = "200px";
   }
   else if (w > 480 && w < 961) {
-    document.getElementById("sidebar-id").style.width = "250px";
+    document.querySelector("#sidebar-id").style.width = "250px";
   }
   else {
-    document.getElementById("sidebar-id").style.width = "350px";
+    document.querySelector("#sidebar-id").style.width = "350px";
   }
 
 }
 
 function closeNav() {
-  document.getElementById("sidebar-id").style.width = "0px";
+  document.querySelector("#sidebar-id").style.width = "0px";
 }
 
 //CHANGE THIS TO SWITCH CASE LATER
-//universal checkbox ayaw eon paghueaga ra, ginpuean ko ran mayad
+//universal checkbox ayaw eon paghueaga ra, ginpueawan ko ran mayad
 var currentStep = document.querySelectorAll(".radio-btn");
 
 currentStep.forEach(el => el.addEventListener("change", event => {
@@ -35,8 +35,11 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
-
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
+        
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
         autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
@@ -51,7 +54,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -67,7 +73,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -83,7 +92,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -99,7 +111,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -115,7 +130,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -131,7 +149,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -147,7 +168,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -163,7 +187,10 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -179,7 +206,13 @@ currentStep.forEach(el => el.addEventListener("change", event => {
       for(i = 0; i <nextStep.length; i++) {
         nextStep[i].style.opacity = "1";
         nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".radio-label").style.marginBottom = "5px";
+        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
+        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
+        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
 
         /*automatic expand, remove at will*/
         autoExpand = nextStep[i].querySelector(".step-collapsible");
@@ -193,6 +226,7 @@ currentStep.forEach(el => el.addEventListener("change", event => {
   }
 }));
 
+
   
 //expanding a step and showing addtl. content
 var expandStep = document.querySelectorAll(".radio-label");
@@ -203,10 +237,12 @@ for(i = 0; i < expandStep.length; i++) {
     var stepContent = this.nextElementSibling;
       if (stepContent.style.maxHeight) {
         stepContent.style.maxHeight = null;
-        this.style.marginBottom = "0";
+        stepContent.style.marginTop = "0";
+        stepContent.style.marginBottom = "0";
       } else {
         stepContent.style.maxHeight = stepContent.scrollHeight + "px";
-        this.style.marginBottom = "5px";
+        stepContent.style.marginTop = "10px";
+        stepContent.style.marginBottom = "10px";
       }
   });
 }
