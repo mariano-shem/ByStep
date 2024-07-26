@@ -31,15 +31,12 @@
   cursor: pointer;
 }
 
-.container-two,
-.container-three,
-.container-four,
-.container-five,
-.container-six,
-.container-seven,
-.container-eight,
-.container-nine {
+.step {
   opacity: 0.3;
+}
+
+.step:first-of-type {
+  opacity: 1;
 }
 
 .step-title {
@@ -63,7 +60,8 @@
 }
 
 .radio-label:after {
-  content: "⯆";
+  font-weight: 700;
+  content: "+";
 }
 
 .radio-label:hover {
@@ -80,6 +78,21 @@
   overflow: hidden;
   flex-wrap: wrap;
   transition: all 0.5s ease-out;
+}
+
+.step-gonext {
+  opacity: 1;
+  .step-collapsible {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.step-fin {
+  .step-collapsible {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .step-collapsible .step-location,
@@ -99,7 +112,8 @@
 }
 
 .expand:after {
-  content: "⯅";
+  font-weight: 700;
+  content: "-";
 }
 
 

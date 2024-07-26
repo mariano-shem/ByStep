@@ -21,211 +21,25 @@ function closeNav() {
 
 //CHANGE THIS TO SWITCH CASE LATER
 //universal checkbox ayaw eon paghueaga ra, ginpueawan ko ran mayad
-var currentStep = document.querySelectorAll(".radio-btn");
+document.querySelectorAll(".radio-btn").forEach(function(input) {
+  input.addEventListener("change", function() {
+      var currentDiv = this.closest(".step");
+      var nextDiv = currentDiv.nextElementSibling;
+      if (nextDiv && nextDiv.classList.contains("step")) {
+        nextDiv.querySelector("input").disabled = false;
+        currentDiv.classList.add("step-fin");
+        nextDiv.classList.add("step-gonext");
 
-currentStep.forEach(el => el.addEventListener("change", event => {
-  var currentButton = event.target.value;
-  var nextStep;
-  var autoExpand;
-  var autoClose;
-
-  switch(currentButton) {
-    case "BoxOne":
-      nextStep = document.querySelectorAll(".container-two");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-        
         /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
+        autoExpand = nextDiv.querySelector(".step-collapsible");
         autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
 
         /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
+        autoClose = currentDiv.querySelector(".step-collapsible");
         autoClose.style.maxHeight = null;
       }
-      break;
-    case "BoxTwo":
-      nextStep = document.querySelectorAll(".container-three");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxThree":
-      nextStep = document.querySelectorAll(".container-four");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxFour":
-      nextStep = document.querySelectorAll(".container-five");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxFive":
-      nextStep = document.querySelectorAll(".container-six");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxSix":
-      nextStep = document.querySelectorAll(".container-seven");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxSeven":
-      nextStep = document.querySelectorAll(".container-eight");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxEight":
-      nextStep = document.querySelectorAll(".container-nine");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxNine":
-      nextStep = document.querySelectorAll(".container-ten");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-    case "BoxTen":
-      nextStep = document.querySelectorAll(".container-eleven");
-      for(i = 0; i <nextStep.length; i++) {
-        nextStep[i].style.opacity = "1";
-        nextStep[i].querySelector("input").disabled = false;
-        nextStep[i].querySelector(".step-collapsible").style.marginTop = "10px";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-        nextStep[i].querySelector(".step-collapsible").style.marginBottom = "10px";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginTop = "0";
-        nextStep[i].previousElementSibling.querySelector(".step-collapsible").style.marginBottom = "0";
-
-        /*automatic expand, remove at will*/
-        autoExpand = nextStep[i].querySelector(".step-collapsible");
-        autoExpand.style.maxHeight = autoExpand.scrollHeight + "px";
-
-        /*automatic close previous step, remove at will*/
-        autoClose = nextStep[i].previousElementSibling.querySelector(".step-collapsible");
-        autoClose.style.maxHeight = null;
-      }
-      break;
-  }
-}));
-
+  });
+});
 
   
 //expanding a step and showing addtl. content
