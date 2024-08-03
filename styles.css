@@ -1,25 +1,31 @@
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(font/Poppins/Poppins-Regular.ttf);
 }
 
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(font/Poppins/Poppins-Medium.ttf);
 }
 
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(font/Poppins/Poppins-Bold.ttf);
 }
 
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+@font-face {
+  font-family: "DM-Sans-Regular";
+  src: url(font/DM_Sans/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "DM-Sans-Medium";
+  src: url(font/DM_Sans/DMSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "DM-Sans-Bold";
+  src: url(font/DM_Sans/DMSans-Bold.ttf);
 }
 /*FONT ENDS HERE*/
 
@@ -28,14 +34,30 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins";
-  font-weight: 400;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-size: 16px;
+  font-family: "Poppins-Regular";
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5, p {
+  font-size: 0.875rem;
 }
 
 
@@ -159,10 +181,6 @@ a {
   align-items: center;
   height: 25%;
   z-index: 1;
-
-  h3 {
-    font-weight: 700;
-  }
 }
 
 

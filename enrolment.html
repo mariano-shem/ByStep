@@ -5,153 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Enrolment Page: ByStep</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="enrolment.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="processpage.css">
+    <link rel="stylesheet" href="processcontent.css">
+    <script src="content-loading/load-enrol.js"></script>
   </head>
 
   <body>
-    <header class="header">
-      <a href="index.html"><img class="text-logo" src="ico/incognito.svg" width="150px"></a>
+    <header class="process-header">
+      <a class="back-home" href="index.html"><img src="ico/arrow-back.svg" alt="-"> <h3>Enrollment</h3> </a>
+      <div class="process-title">
+        <h1>ENROLLMENT</h1>
+      </div>
+        
     </header>
-
     <div class="main-page">
-      <div class="header-placeholder"></div> <!--placeholder space below header to prevent cdivpping of contents with main page-->
+      <div class="procedure"><h3>Procedure</h3></div>
       <div class="step-container">
-        <div class="step container-one "> <!--step 1-->
-          <div class="radio-container"> <!--button-->
-            <input class="radio-btn" type="radio" value="BoxOne">
-          </div>          
-          <div class="step-title"> <!--info container-->
-            <div class="radio-label"><p>1. Registrar's Office</p></div> <!--step label-->
-            <div class="step-collapsible"> <!--step expand-->
-              <div class="step-location">
-                <p>LOCATION</p>
-                <div id="enr-loc-s01"></div>
-              </div>
-              <div class="step-requirement">
-                <p>REQUIREMENTS</p>
-                <div id="enr-req-s01"></div>
-              </div>
-              <div class="step-process">
-                <p>PROCESS</p>
-                <div id="enr-pro-s01"></div>
-              </div>
+<!----------------------step 1----------------------------------------->
+        <div class="container step-one active">    
+          <!--------------title-------------------->
+          <div class="accordion-header">
+            <div class="accordion-label"><h4>Get Enrollment Form</h4></div>
+          </div>
+          <!--------------content-------------------->
+          <div class="accordion-panel first-accordion-panel">
+            <div id="one" class="content">
+              
+            </div>
+            <div class="nav-button">
+              <button class="next-button" type="button">Next</button>
+            </div>
+            
+          </div>
+        </div>
+
+<!----------------------step 2----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header">
+            <div class="accordion-label"><p>Fill Out Enrollment Form</p></div>
+          </div>
+          <!--------------content-------------------->
+          <div class="accordion-panel">
+            <div id="two" class="content">
+              
+            </div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="next-button" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+<!----------------------step 3----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header"> 
+            <div class="accordion-label"><p>Proceed to the HAC's Office</p></div> 
+          </div>
+          <!--------------content-------------------->
+          <div class="accordion-panel"> 
+            <div id="three" class="content">
+              
+            </div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="next-button" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+<!----------------------step 4----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header"> 
+            <div class="accordion-label"><p>Get an Assessment</p></div> 
+          </div>
+          <!--------------content-------------------->
+          <div class="accordion-panel"> 
+            <div id="four" class="content">
+            </div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="next-button" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+<!----------------------step 5----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header"> 
+            <div class="accordion-label"><p>Pay at the Treasurer's Office</p></div> 
+          </div>
+          <!--------------content-------------------->
+          <div class="accordion-panel"> 
+            <div id="five" class="content">
+              
+            </div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="next-button" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+<!----------------------step 6----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header"> 
+            <div class="accordion-label"><p>Go to the Guidance Office</p></div> 
+          </div>
+          <!--------------content-------------------->
+          <div class="accordion-panel"> 
+            <div id="six" class="content">
+              
+            </div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="next-button" type="button">Next</button>
             </div>
           </div>
           
         </div>
-        <div class="step container-two"> <!--step 2-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxTwo" disabled>
+<!----------------------step 7----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header"> 
+            <div class="accordion-label"><p>Go to the Library</p></div> 
           </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>2. HAC's Office</p></div><!--step label-->
-            <div class="step-collapsible"><!--step expand-->
-              <div class="step-location">
-                <p>LOCATION</p>
-              </div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
+          <!--------------content-------------------->
+          <div class="accordion-panel"> 
+            <div id="seven" class="content">
+              
+            </div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="next-button" type="button">Next</button>
             </div>
           </div>
         </div>
-        <div class="step container-three"> <!--step 3-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxThree" disabled>
+<!----------------------step 8----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header"> 
+            <div class="accordion-label"><p>Proceed to the EVP Office</p></div> 
           </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>3. Assessment's Office</p></div><!--step label-->
-            <div class="step-collapsible"><!--step expand-->
-              <div class="step-location"><p>LOCATION</p></div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
+          <!--------------content-------------------->
+          <div class="accordion-panel"> 
+            <div id="eight" class="content">
+              
+            </div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="next-button" type="button">Next</button>
             </div>
           </div>
         </div>
-        <div class="step container-four"> <!--step 4-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxFour" disabled>
+<!----------------------step 9----------------------------------------->
+        <div class="container">
+          <!--------------title-------------------->
+          <div class="accordion-header"> 
+            <div class="accordion-label"><p>Return to the Registrar's Office</p></div> 
           </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>4. Treasurer's Office</p></div><!--step label-->
-            <div class="step-collapsible"> <!--step expand-->
-              <div class="step-location"><p>LOCATION</p></div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
+          <!--------------content-------------------->
+          <div class="accordion-panel"> 
+            <div id="nine" class="content">
+              
             </div>
-          </div>
-        </div>
-        <div class="step container-five"> <!--step 5-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxFive" disabled>
-          </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>5. Library</p></div><!--step label-->
-            <div class="step-collapsible"><!--step expand-->
-              <div class="step-location"><p>LOCATION</p></div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="step container-six"> <!--step 6-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxSix" disabled>
-          </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>6. Guidance Office</p></div><!--step label-->
-            <div class="step-collapsible"><!--step expand-->
-              <div class="step-location"><p>LOCATION</p></div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="step container-seven"> <!--step 7-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxSeven" disabled>
-          </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>7. EVP Office</p></div><!--step label-->
-            <div class="step-collapsible"><!--step expand-->
-              <div class="step-location"><p>LOCATION</p></div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="step container-eight"> <!--step 8-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxEight" disabled>
-          </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>8. Registrar's Office</p></div><!--step label-->
-            <div class="step-collapsible"><!--step expand-->
-              <div class="step-location"><p>LOCATION</p></div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="step container-nine"> <!--step 9-->
-          <div class="radio-container"><!--button-->
-            <input class="radio-btn" type="radio" value="BoxNine" disabled>
-          </div>
-          <div class="step-title"><!--info container-->
-            <div class="radio-label"><p>9. Internet Lab</p></div><!--step label-->
-            <div class="step-collapsible"><!--step expand-->
-              <div class="step-location"><p>LOCATION</p></div>
-              <div class="step-requirement"><p>REQUIREMENTS</p></div>
-              <div class="step-process"><p>PROCESS</p></div>
+            <div class="nav-button">
+              <button class="back-button" type="button">Back</button>
+              <button class="finish-button" type="button">Finish</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+
     <script src="script.js" defer></script>
-    <script src="contentload.js" defer></script>
+    <script src="processpage.js" defer></script>
   </body>
