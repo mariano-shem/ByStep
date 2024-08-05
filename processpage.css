@@ -53,7 +53,7 @@
 }
 
 .container {
-  background-color: rgb(215, 215, 215);
+  background-color: #d7d7d7;
   display: block;
   align-items: flex-start;
   font-size: 1.2rem;
@@ -68,7 +68,7 @@
 
 .accordion-header {
   border-radius: 8px 8px 8px 8px;
-  background-color: white;
+  background-color: #E8EAED;
   display: flex;
   width: 100%;
   border-bottom: 0px solid black;

@@ -7,16 +7,29 @@ async function loadAccordionContents() {
       const parser = new DOMParser();
       const doc = parser.parseFromString(accordionText, "text/html");
 
-      //every line represent a step of a process page
-      document.getElementById("one").innerHTML = doc.querySelector("#one").innerHTML;
-      document.getElementById("two").innerHTML = doc.querySelector("#two").innerHTML;
-      document.getElementById("three").innerHTML = doc.querySelector("#three").innerHTML;
-      document.getElementById("four").innerHTML = doc.querySelector("#four").innerHTML;
-      document.getElementById("five").innerHTML = doc.querySelector("#five").innerHTML;
-      document.getElementById("six").innerHTML = doc.querySelector("#six").innerHTML;
-      document.getElementById("seven").innerHTML = doc.querySelector("#seven").innerHTML;
-      document.getElementById("eight").innerHTML = doc.querySelector("#eight").innerHTML;
-      document.getElementById("nine").innerHTML = doc.querySelector("#nine").innerHTML;
+      //every line represent a heading of a process page
+      document.getElementById("head-1").innerHTML = doc.querySelector("#head-1").innerHTML;
+      document.getElementById("head-2").innerHTML = doc.querySelector("#head-2").innerHTML;
+      document.getElementById("head-3").innerHTML = doc.querySelector("#head-3").innerHTML;
+      document.getElementById("head-4").innerHTML = doc.querySelector("#head-4").innerHTML;
+      document.getElementById("head-5").innerHTML = doc.querySelector("#head-5").innerHTML;
+      document.getElementById("head-6").innerHTML = doc.querySelector("#head-6").innerHTML;
+      document.getElementById("head-7").innerHTML = doc.querySelector("#head-7").innerHTML;
+      document.getElementById("head-8").innerHTML = doc.querySelector("#head-8").innerHTML;
+      document.getElementById("head-9").innerHTML = doc.querySelector("#head-9").innerHTML;
+      document.getElementById("head-10").innerHTML = doc.querySelector("#head-10").innerHTML;
+      //every line represent a content of a process page
+      document.getElementById("content-1").innerHTML = doc.querySelector("#content-1").innerHTML;
+      document.getElementById("content-2").innerHTML = doc.querySelector("#content-2").innerHTML;
+      document.getElementById("content-3").innerHTML = doc.querySelector("#content-3").innerHTML;
+      document.getElementById("content-4").innerHTML = doc.querySelector("#content-4").innerHTML;
+      document.getElementById("content-5").innerHTML = doc.querySelector("#content-5").innerHTML;
+      document.getElementById("content-6").innerHTML = doc.querySelector("#content-6").innerHTML;
+      document.getElementById("content-7").innerHTML = doc.querySelector("#content-7").innerHTML;
+      document.getElementById("content-8").innerHTML = doc.querySelector("#content-8").innerHTML;
+      document.getElementById("content-9").innerHTML = doc.querySelector("#content-9").innerHTML;
+      document.getElementById("content-10").innerHTML = doc.querySelector("#content-10").innerHTML;
+      
       
     } else {
       console.error("No content.", response.status, response.statusText);
@@ -71,6 +84,6 @@ function onPageLoad() {
   setTimeout(() => {
   openAccordion()
   openCollapsible()
-  }, 100)
+  }, 200)
 }
 window.onload = onPageLoad;
