@@ -21,7 +21,7 @@
       margin-right: 0.5rem;
     }
     h3 {
-      font-family: "Poppins-Medium";
+      font-family: "Poppins-Medium", Helvetica, sans-serif;
     }
 }
 
@@ -31,7 +31,7 @@
   bottom: 0;
   user-select: none;
   h1 {
-    font-family: "Poppins-Bold";
+    font-family: "Poppins-Bold", Helvetica, sans-serif;
   }
 }
 
@@ -42,7 +42,7 @@
   margin: 0.4rem 0.8rem;
   user-select: none;
   h3 {
-    font-family: "Poppins-Medium";
+    font-family: "Poppins-Medium", Helvetica, sans-serif;
   }
 }
 
@@ -83,7 +83,7 @@
   width: 100%;
   user-select: none;
   h4 {
-    font-family: "Poppins-Medium";
+    font-family: "Poppins-Medium", Helvetica, sans-serif;
   }
 }
 .accordion-label::before{
@@ -117,7 +117,7 @@
   display: flex;
   justify-content: flex-end;
   button {
-    font-family: "Poppins-Medium";
+    font-family: "Poppins-Medium", Helvetica, sans-serif;
     font-size: 0.8rem;
     margin-right: 0.5rem;
     padding: 0.2rem 1rem;
@@ -177,7 +177,7 @@
     justify-content: flex-start;
     width: 100%;
     margin: 0.6rem 1.2rem;
-    font-family: "Poppins-Medium";
+    font-family: "Poppins-Medium", Helvetica, sans-serif;
   }
 
   .accordion-label::before{
