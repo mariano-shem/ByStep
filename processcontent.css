@@ -27,7 +27,7 @@
   }
 }
 
-.collapsible-content, .listed-content {
+.sublist-content {
   list-style-type: none;
   > li > ul {
     padding-left: 1rem;
