@@ -71,6 +71,6 @@ function onPageLoad() {
   setTimeout(() => {
   openAccordion()
   openCollapsible()
-  }, 200)
+  }, 500)
 }
 window.onload = onPageLoad;
