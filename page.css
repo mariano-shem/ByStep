@@ -39,13 +39,15 @@
 }
 
 .procedure {
-  display: flex;
-  justify-content: flex-start;
+  display: block;
   width: 100%;
   margin: 0.4rem 0.8rem;
   user-select: none;
   h3 {
     font-family: "Poppins-Medium", Helvetica, sans-serif;
+  }
+  li {
+    margin-left: 1rem;
   }
 }
 
@@ -185,8 +187,7 @@
   }
 
   .procedure {
-    display: flex;
-    justify-content: flex-start;
+    display: block;
     width: 100%;
     margin: 0.6rem 1.2rem;
     font-family: "Poppins-Medium", Helvetica, sans-serif;
