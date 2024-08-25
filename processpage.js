@@ -74,7 +74,7 @@ backButton.forEach(function(button) {
 //go home
 finishButton.forEach(function(button) {
   button.addEventListener("click", function() {
-    location.href = "index.html";
+    location.href = "../index.html";
   })
 })
 

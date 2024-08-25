@@ -1,30 +1,24 @@
-
-function openNav() {
-
-  let w = document.documentElement.clientWidth || window.innerWidth;
-
-  if (w <=480) {
-    document.querySelector("#sidebar-id").style.width = "200px";
-  }
-  else if (w > 480 && w < 961) {
-    document.querySelector("#sidebar-id").style.width = "250px";
-  }
-  else {
-    document.querySelector("#sidebar-id").style.width = "350px";
-  }
-
-}
-
-function closeNav() {
-  document.querySelector("#sidebar-id").style.width = "0px";
-}
-
-
-
+let w = document.documentElement.clientWidth || window.innerWidth;
+  document.querySelector("#sidebar-open").addEventListener("click",
+    function() {
+      document.querySelector(".mobile-sidebar").style.width = "60%";
+      document.querySelector(".main-page").style.opacity = "0.4";
+      document.querySelector(".header").style.opacity = "0.4";
+  });
   
-
-
-
+  document.querySelector("#sidebar-close").addEventListener("click",
+    function() {
+      document.querySelector(".mobile-sidebar").style.width = "0";
+      document.querySelector(".main-page").style.opacity = "1";
+      document.querySelector(".header").style.opacity = "1";
+  });
+  
+  document.querySelector(".main-page").addEventListener("click",
+    function() {
+      document.querySelector(".mobile-sidebar").style.width = "0";
+      document.querySelector(".main-page").style.opacity = "1";
+      document.querySelector(".header").style.opacity = "1";
+  });
 
 
 

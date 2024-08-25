@@ -1,3 +1,0 @@
-First paragraph, first line.
-Will this line serve as a new line or as an inline?
-  Will this margin serve as a margin or not?
