@@ -167,7 +167,7 @@ a {
   align-items: center;
   width: 50%;
   padding-top: 100%;
-  padding: 20px;/* dont delete this important line lmao */
+  padding: 1rem;/* dont delete this important line lmao */
 }
 
 .viewcard {
@@ -237,6 +237,10 @@ a {
 /*tablet screen*/
 @media only screen and (min-width: 481px) and (max-width: 960px){
 
+  .section {
+    width: 33%;
+  }
+
   .sidebar-btn, .search-btn {
     width: 40px;
   }
@@ -248,19 +252,14 @@ a {
   .main-page .header-placeholder {
     height: 80px;
   }
-
-  .main-page .viewcard {
-    height: 200px;
-    width: 200px;
-  }
 }
 
 /*desktop screen*/
 @media only screen and (min-width: 961px) {
   .main-page {
     width: 60%;
+    align-items: flex-start;
     margin: 0 auto;
-    border: 1px solid black;
     /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);*/
   }
 
@@ -278,6 +277,7 @@ a {
 
   .desktop-sidebar {
     display: block;
+    border-right: 1px solid black;
   }
   .search-btn {
     width: 50px;
@@ -285,10 +285,4 @@ a {
   .main-page .header-placeholder {
     height: 90px;
   }
-
-  .main-page .viewcard {
-    height: 250px;
-    width: 250px;
-  }
-
 }
