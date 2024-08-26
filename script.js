@@ -1,36 +1,35 @@
 let w = document.documentElement.clientWidth || window.innerWidth;
-let q = document.querySelectorAll(".viewcard");
+const nolink = document.querySelectorAll(".viewcard");
+const sidebarMenu = document.querySelector(".mobile-sidebar");
+const sidebarBtn = document.querySelector(".sidebar-btn");
 
-document.querySelector(".sidebar-btn").addEventListener("click",
-    function() {
-      document.querySelector(".mobile-sidebar").style.width = "75%";
-      document.querySelector(".main-page").style.opacity = "0.4";
-      document.querySelector(".header").style.opacity = "0.4";
-      for (let i = 0; i < q.length; i++) {
-        q[i].classList.add("disable-link");
-      };
-  });
-  
-document.querySelector(".closebtn").addEventListener("click",
-    function() {
-      document.querySelector(".mobile-sidebar").style.width = "0";
+sidebarBtn.addEventListener("click",
+  function() {
+    this.classList.toggle("close");
+    if(sidebarMenu.style.width) {
+      sidebarMenu.style.width = null;
       document.querySelector(".main-page").style.opacity = "1";
-      document.querySelector(".header").style.opacity = "1";
-      for (let i = 0; i < q.length; i++) {
-        q[i].classList.remove("disable-link");
+      for (let i = 0; i < nolink.length; i++) {
+          nolink[i].classList.remove("disable-link");
       };
-
-  });
+    } else {
+      sidebarMenu.style.width = "75%";
+      document.querySelector(".main-page").style.opacity = "0.3";
+      for (let i = 0; i < nolink.length; i++) {
+          nolink[i].classList.add("disable-link");
+      };
+    }
+});
 
 document.querySelector(".main-page").addEventListener("click",
-    function() {
-      document.querySelector(".mobile-sidebar").style.width = "0";
-      document.querySelector(".main-page").style.opacity = "1";
-      document.querySelector(".header").style.opacity = "1";
-      for (let i = 0; i < q.length; i++) {
-        q[i].classList.remove("disable-link");
-      };
-  });
+  function() {
+    sidebarMenu.style.width = null;
+    document.querySelector(".main-page").style.opacity = "1";
+    for (let i = 0; i < nolink.length; i++) {
+        nolink[i].classList.remove("disable-link");
+    };
+    sidebarBtn.classList.remove("close");
+});
 
 
 

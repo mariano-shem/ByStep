@@ -86,26 +86,32 @@ a {
 /*sidebar starts here*/
 .mobile-sidebar {
   position: fixed;
-  top: 0;
+  top: 4rem;
   left: 0;
   z-index: 2;
   display: block;
+  white-space: nowrap;
   height: 100%;
   width: 0;
   background-color: #f4f4f4;
-  transition: 0.3s ease-out;
+  transition: 0.4s ease-out;
   overflow-x: hidden;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2)
 }
 
-.sidebar-btn, .closebtn {
+.sidebar-btn {
+  content: url(ico/sidebar.svg);
   cursor: pointer;
+}
+
+.close {
+  content: url(ico/close.svg);
 }
 
 .mobile-sidebar .nav-top {
   background-color: rgb(61, 61, 61);
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 1rem;
   height: 4rem;
@@ -143,6 +149,8 @@ a {
   display: none;
   height: 90%;
   width: 20%;
+  border-right: 1px solid black;
+  overflow-y: scroll;
   scrollbar-width: thin;
   -ms-overflow-style: auto;
 }
@@ -157,8 +165,10 @@ a {
 .main-page {
   /*background-color: #E8EAED;*/
   position: relative;
+  min-height: 1%;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -169,10 +179,9 @@ a {
 .section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
-  padding-top: 100%;
-  padding: 1rem;/* dont delete this important line lmao */
+  padding: 0.5rem;/* dont delete this important line lmao */
 }
 
 .viewcard {
@@ -262,8 +271,7 @@ a {
 /*desktop screen*/
 @media only screen and (min-width: 961px) {
   .main-page {
-    width: 60%;
-    align-items: flex-start;
+    width: 60%; 
     margin: 0 auto;
     /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);*/
   }
@@ -282,8 +290,6 @@ a {
 
   .desktop-sidebar {
     display: block;
-    border-right: 1px solid black;
-    overflow: scroll;
   }
   .search-btn {
     width: 50px;
