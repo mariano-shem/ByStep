@@ -3,7 +3,7 @@ let q = document.querySelectorAll(".viewcard");
 
 document.querySelector(".sidebar-btn").addEventListener("click",
     function() {
-      document.querySelector(".mobile-sidebar").style.width = "50%";
+      document.querySelector(".mobile-sidebar").style.width = "75%";
       document.querySelector(".main-page").style.opacity = "0.4";
       document.querySelector(".header").style.opacity = "0.4";
       for (let i = 0; i < q.length; i++) {

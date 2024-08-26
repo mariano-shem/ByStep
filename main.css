@@ -117,6 +117,9 @@ a {
   list-style-type: none;
   border-bottom: 1px solid black;
   padding: 1rem 0;
+  p {
+    opacity: 0.5;
+  }
 }
 .list-name {
   > li {
@@ -138,8 +141,10 @@ a {
   left: 0;
   z-index: 2;
   display: none;
-  height: 100%;
+  height: 90%;
   width: 20%;
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
 }
 
 .disable-link {
@@ -278,6 +283,7 @@ a {
   .desktop-sidebar {
     display: block;
     border-right: 1px solid black;
+    overflow: scroll;
   }
   .search-btn {
     width: 50px;
