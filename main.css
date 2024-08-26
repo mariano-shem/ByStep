@@ -115,14 +115,13 @@ a {
 }
 .list-header {
   list-style-type: none;
-  padding-left: 0.5rem;
+  border-bottom: 1px solid black;
+  padding: 1rem 0;
 }
 .list-name {
-  list-style-type: none;
   > li {
-    display: block;
-    list-style-type: none;
-    padding-left: 1.2rem;
+    list-style-type: circle;
+    margin-left: 1.2rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     border-radius: 6px;
@@ -134,7 +133,6 @@ a {
 }
 
 .desktop-sidebar {
-  margin-top: 2rem;
   position: fixed;
   top: 4rem;
   left: 0;
@@ -142,6 +140,10 @@ a {
   display: none;
   height: 100%;
   width: 20%;
+}
+
+.disable-link {
+  pointer-events: none;
 }
 /*sidebar ends here*/
 
