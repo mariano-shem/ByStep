@@ -91,7 +91,7 @@ a {
   z-index: 2;
   display: block;
   white-space: nowrap;
-  height: 100%;
+  height: 95%;
   width: 0;
   background-color: #f4f4f4;
   transition: 0.4s ease-out;
@@ -99,34 +99,45 @@ a {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2)
 }
 
-.sidebar-btn {
+.sidebar-open {
   content: url(ico/sidebar.svg);
   cursor: pointer;
 }
 
-.close {
+.sidebar-close {
   content: url(ico/close.svg);
 }
-
-.mobile-sidebar .nav-top {
-  background-color: rgb(61, 61, 61);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 1rem;
-  height: 4rem;
+.desktop-sidebar {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  z-index: 2;
+  display: none;
+  white-space: nowrap;
+  height: 95%;
+  width: 20%;
+  border-right: 1px solid black;
+  overflow-y: hidden;
+}
+.desktop-sidebar:hover {
+  overflow-y: auto;
+  -ms-overflow-style: auto;
+  scrollbar-width: thin;
 }
 .nav-list {
   padding: 0 1rem;
 }
 .list-header {
   list-style-type: none;
-  border-bottom: 1px solid black;
   padding: 1rem 0;
   p {
     opacity: 0.5;
   }
 }
+.list-header:first-of-type {
+  border-bottom: 1px solid black;
+}
+
 .list-name {
   > li {
     list-style-type: circle;
@@ -140,23 +151,13 @@ a {
     background-color: #dddee0;
   }
 }
-
-.desktop-sidebar {
-  position: fixed;
-  top: 4rem;
-  left: 0;
-  z-index: 2;
-  display: none;
-  height: 90%;
-  width: 20%;
-  border-right: 1px solid black;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  -ms-overflow-style: auto;
-}
-
 .disable-link {
   pointer-events: none;
+}
+
+.sidebar-footer {
+  display: block;
+  height: 5vh;
 }
 /*sidebar ends here*/
 
@@ -243,9 +244,6 @@ a {
 
 /*mobile screen */
 @media only screen and (max-width: 480px) {
-  .main-page {
-    background-color: #E8EAED;
-  }
 }
 
 /*tablet screen*/
@@ -284,7 +282,7 @@ a {
     width: 200px;
   }
 
-  .mobile-sidebar, .sidebar-btn {
+  .mobile-sidebar, .sidebar-open {
     display: none;
   }
 

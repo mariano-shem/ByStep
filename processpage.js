@@ -31,7 +31,7 @@ nextButton.forEach(
         //reposition screen to next step
         currentDiv.scrollIntoView({
           behavior: "smooth",
-          block: "center"
+          block: "start"
         });
 
         currentDiv.classList.toggle("active");
