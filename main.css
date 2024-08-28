@@ -212,8 +212,8 @@ a {
 .viewcard .card-image {
   position: absolute;
   height: 100%;
-  width: 100%;
   transition: transform 0.5s;
+  overflow: hidden;
 }
 
 .card-name {
@@ -247,7 +247,7 @@ a {
 }
 
 /*tablet screen*/
-@media only screen and (min-width: 481px) and (max-width: 960px){
+@media only screen and (min-width: 481px) and (max-width: 1024px){
 
   .section {
     width: 33%;
@@ -267,7 +267,7 @@ a {
 }
 
 /*desktop screen*/
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1025px) {
   .main-page {
     width: 60%; 
     margin: 0 auto;
