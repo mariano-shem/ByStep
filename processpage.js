@@ -19,20 +19,29 @@ nextButton.forEach(
         const currentAccordion  = currentDiv.querySelector(".accordion-panel"); //current accordion
         const nextAccordion  = nextDiv.querySelector(".accordion-panel"); //next step accordion
 
+        closeStep(openStep);
+        
         //close current accordion
-        currentAccordion.style.maxHeight = "0";
-        currentAccordion.style.marginTop = "0";
-        currentAccordion.style.marginBottom = "0";
+        function closeStep(cb) {
+          currentAccordion.style.maxHeight = "0";
+          currentAccordion.style.marginTop = "0";
+          currentAccordion.style.marginBottom = "0";
+          setTimeout(function () {
+            cb();
+          }, 200)
+        }
         //open next accordion
-        nextAccordion.style.maxHeight = nextAccordion.scrollHeight + "px";
-        nextAccordion.style.marginTop = "0.1rem";
-        nextAccordion.style.marginBottom = "0.1rem";
-
+        function openStep() {
+          nextAccordion.style.marginTop = "0.1rem";
+          nextAccordion.style.marginBottom = "0.1rem";
+          nextAccordion.style.maxHeight = nextAccordion.scrollHeight + "px";
+        }
+        
         //reposition screen to next step
-        currentDiv.scrollIntoView({
+        /*currentDiv.scrollIntoView({
           behavior: "smooth",
           block: "start"
-        });
+        });*/
 
         currentDiv.classList.toggle("active");
         nextDiv.classList.toggle("active");
@@ -61,10 +70,10 @@ backButton.forEach(function(button) {
     prevAccordion.style.maxHeight = prevAccordion.scrollHeight + "px";
 
     //reposition screen to last step
-    currentDiv.scrollIntoView({
+    /*currentDiv.scrollIntoView({
       behavior: "smooth",
       block: "center"
-    });
+    });*/
 
     currentDiv.classList.toggle("active");
     prevDiv.classList.toggle("active");
