@@ -44,7 +44,6 @@ body {
   background-color: #F3F4F6;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-attachment: fixed;
   background-position: center;
 }
 
@@ -316,21 +315,12 @@ a {
 
 /*tablet screen*/
 @media only screen and (min-width: 481px) and (max-width: 1024px){
+  .main-title {
+    margin-top: 2rem;
+  }
 
   .section {
-    width: 33%;
-  }
-
-  .sidebar-btn, .search-btn {
-    width: 40px;
-  }
-
-  .mobile-sidebar .nav-top img {
-    height: 40px;
-  }
-
-  .main-page .header-placeholder {
-    height: 80px;
+    width: 50%;
   }
 }
 
@@ -347,7 +337,7 @@ a {
   }
   .main-title {
     width: 75%;
-    height: 8rem;
+    height: 25vh;
     margin-bottom: 0;
   }
   .main-page {

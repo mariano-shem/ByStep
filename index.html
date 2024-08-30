@@ -7,9 +7,24 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+      body {
+        background-image: url(gallery/480p/mainbg-mobile.png);
+      }
+      @media only screen and (min-width: 481px) and (max-width: 1024px){
+        body {
+          background-image: url(gallery/768p/mainbg-tab.png);
+        }
+      }
+      @media only screen and (min-width: 1025px) {
+        body {
+          background-image: url(gallery/1152p/mainbg-desktop.png);
+        }
+      }
+    </style>
   </head>
 
-  <body style="background-image: url(gallery/blue-1.png);">
+  <body>
     <header class="header">
       <img id="sidebr" class="sidebar-open">
       <img class="header-icons" src="ico/light-mode/logoonly-blue.svg">

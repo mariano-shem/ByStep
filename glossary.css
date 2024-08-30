@@ -47,11 +47,16 @@
 }
 
 @media only screen and (min-width: 1025px) {
+  body {
+    display: block;
+  }
   .glossary-header {
     width: 50%;
     margin: 0 auto;
   }
   .main-page {
+    width: 50%;
+    margin: 0 auto;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
 }
