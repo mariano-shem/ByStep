@@ -219,7 +219,7 @@ a {
 .main-title {
   display: flex;
   justify-content: center;
-  height: 18rem;
+  height: 12rem;
   img {
     display: block;
     width: 80%;
