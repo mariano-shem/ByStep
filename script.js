@@ -31,7 +31,22 @@ const sidebarBtn = document.querySelector(".sidebar-open");
       sidebarBtn.classList.remove("sidebar-close");
   });
 
+const checkmode = document.querySelector("#toggledark-btn");
+const body = document.querySelector("body");
 
+checkmode.addEventListener("change", 
+  function() {
+    body.classList.toggle("toggledark");
+    if(body.classList.contains("toggledark")) {
+      localStorage.setItem("darkMode", "on")
+      this.checked = true;
+    } else {
+      localStorage.setItem("darkMode", "off")
+      this.checked = false;
+    }
+})
 
-
-  
+if(localStorage.getItem("darkMode") === "on") {
+  body.classList.add("toggledark");
+  checkmode.checked = true;
+} 

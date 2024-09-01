@@ -86,6 +86,6 @@ finishButton.forEach(function(button) {
     location.href = "../index.html";
   })
 })
-
-
-
+if(localStorage.getItem("darkMode") === "on") {
+  document.querySelector("body").classList.add("toggledark");
+} 

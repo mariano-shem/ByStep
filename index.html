@@ -5,38 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Main Page: ByStep</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="darkmode.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-      body {
-        background-image: url(gallery/480p/mainbg-mobile.png);
-      }
-      @media only screen and (min-width: 481px) and (max-width: 1024px){
-        body {
-          background-image: url(gallery/768p/mainbg-tab.png);
-        }
-      }
-      @media only screen and (min-width: 1025px) {
-        body {
-          background-image: url(gallery/1152p/mainbg-desktop.png);
-        }
-      }
-    </style>
   </head>
 
   <body>
     <header class="header">
       <img id="sidebr" class="sidebar-open">
-      <img class="header-icons" src="ico/light-mode/logoonly-blue.svg">
-      <img class="header-icons" src="ico/light-mode/gct-blue.png">
+      <img class="header-icons applogo">
+      <img class="header-icons gctlogo">
       <h3 class="school-name">GARCIA COLLEGE OF TECHNOLOGY</h3>
-      <img class="search-btn" src="ico/light-mode/search-blue.svg">
+      <img class="search-btn">
       </div>
     </header>
     <div class="header-placeholder"></div> <!--placeholder space below header to prevent clipping of contents with main page-->
     
     <div class="main-title"><!--big-ass title-->
-      <img src="ico/light-mode/maintitle-blue.svg">
+      <img>
     </div>
     
     <div class="main-page">
@@ -133,7 +119,12 @@
       </ul>
       <div class="sidebar-footer"></div>
     </div>
-      
+    <div class="togglemode">
+      <span><h4>Dark Theme</h4></span>
+      <label class="toggle">
+        <input type="checkbox" id="toggledark-btn"><span class="slider"></span>
+      </label>
+    </div>
     <div class="desktop-sidebar">
       <ul class="nav-list">
         <li class="list-header"><p>DOCUMENTS<p>

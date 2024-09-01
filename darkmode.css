@@ -1,0 +1,190 @@
+.toggledark {
+  background-color: #121212;
+  background-image: url(gallery/480p/mainbgdark-mobile.png);
+
+  .header {
+    background-color: #252728;
+  }
+
+  .sidebar-open {
+    content: url(ico/dark-mode/sidebaropen-gold.svg);
+  }
+  .sidebar-close {
+    content: url(ico/dark-mode/sidebarclose-gold.svg);
+  }
+  .gctlogo {
+    content: url(ico/dark-mode/gct-gold.png);
+  }
+  .applogo {
+    content: url(ico/dark-mode/logoonly-gold.svg);
+  }
+  .search-btn {
+    content: url(ico/dark-mode/search-gold.svg);
+  }
+/*sidebars*/
+  .list-header {
+    p {
+      color: #e3d585;
+    }
+  }
+  .list-name {
+    a {
+      color: #e3d585;
+    }
+    > li:hover {
+      background-color: #e3d585;
+      a {
+        color: #252728;
+      }
+    }
+  }
+  .togglemode {
+    span {
+      color: #e3d585;
+    }
+  }
+  .mobile-sidebar {
+    background-color: #252728;
+  }
+  .desktop-sidebar {
+    background: rgba(21, 20, 20, 0.19);
+  }
+  .list-header:first-of-type {
+    border-color: #e3d585;
+  }
+/*main*/
+  .main-title {
+    img {
+      content: url(ico/dark-mode/maintitle-gold.svg); 
+    }
+  }
+  .viewcard {
+    background-color: #252728;
+    transition: none;
+  }
+  .viewcard::after {
+    content: url(ico/dark-mode/enter-gold.svg);
+  }
+  .viewcard:hover {
+    background-color: #e3d585;
+    .card-name {
+      h4 {
+        color: #252728;
+      }
+    }
+  }
+  .card-name {
+    h4 {
+      color: #e3d585;
+    }
+  }
+/*================PROCESS PAGE===================*/
+  .process-header {
+    background-image: url(gallery/480p/processheaderdark-mobile.png);
+  }
+
+  .process-title {
+    color: #e5e5e5;
+  }
+
+  .procedure {
+    h3 {
+      color: #e5e5e5;
+    }
+  }
+  .container {
+    background-color: #252728;
+  }
+  .accordion-header {
+    background-color: #252728;
+  }
+  .accordion-label {
+    h4 {
+      color: #e3d585;
+    }
+  }
+  .accordion-label::before {
+    content: url(ico/dark-mode/unchecked\ box-gold.svg);
+  }
+  .accordion-label::after {
+    content: url(ico/dark-mode/collapse-down-gold.svg);
+  }
+  .accordion-panel {
+    color: #e5e5e5;
+  }
+
+
+  .active {/*crucial shit*/
+    .accordion-header {
+      background-color: #e3d585;
+    }
+    .accordion-label {
+      h4 {
+        color: #252728;
+      }
+    }
+    .accordion-label::after {
+      content: url(ico/dark-mode/collapse-up.svg);
+    }
+    .accordion-label::before {
+      content: url(ico/dark-mode/unchecked\ box.svg);
+    }
+  }
+  .done {
+    .accordion-label::before {
+      content: url(ico/dark-mode/checked\ box-gold.svg);
+    }
+  }
+  .done.active {
+    .accordion-label::before {
+      content: url(ico/dark-mode/checked\ box.svg);
+    }
+  }
+  .next-button {
+    color: #252728;
+    background-color: #e3d585;
+  }
+  .back-button {
+    border-color: #e3d585;
+    color: #e3d585;
+    background-color: #252728;
+  }
+
+  /*===========CONTENT CSS==============*/
+  .collapsible-header::after {
+    content: url(ico/light-mode/collapse-down.svg);
+  }
+  .collapsible-header:hover {
+    background-color: #e3d585;
+    color: #252728;
+  }
+  .collapsible-header:hover::after {
+    content: url(ico/dark-mode/collapse-down.svg);
+  }
+  .open {
+    background-color: #e3d585;
+    color: #252728;
+  }
+  .open::after {
+    content: url(ico/dark-mode/collapse-up.svg);
+  }
+  .open:hover::after {
+    content: url(ico/dark-mode/collapse-up.svg);
+  }
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .process-header {
+      background-image: url(gallery/768p/processheaderdark-tab.png);
+    }
+  }
+  @media only screen and (min-width: 1025px) {
+    .header {
+      .school-name {
+        color: #e3d585;
+      }
+    }
+
+    .process-header {
+      background-image: url(gallery/1152p/processheaderdark-desktop.png);
+    }
+  }
+}
