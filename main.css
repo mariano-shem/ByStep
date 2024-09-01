@@ -165,13 +165,15 @@ a {
   > li {
     position: relative;
     list-style-type: none;
-    padding-left: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     border-radius: 6px;
     cursor: pointer;
     list-style-position: inside;
-    a{
+    a {
+      display: flex;
+      padding-left: 2rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      width: inherit;
       color: #333399;
     }
   }
@@ -236,6 +238,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  transition: opacity 0.2s;
 }
 
 .header-placeholder {
@@ -320,7 +323,7 @@ a {
   }
 
   .section {
-    width: 50%;
+    width: 100%;
   }
 }
 
