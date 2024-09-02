@@ -5,7 +5,6 @@ const sidebarBtn = document.querySelector(".sidebar-open");
 const mainPage = document.querySelectorAll(".sbc");
   sidebarBtn.addEventListener("click",
     function() {
-      this.classList.toggle("sidebar-close");
       if(sidebarMenu.style.width) {
         sidebarMenu.style.width = null;
         for(i = 0; i < mainPage.length; i++) {
@@ -34,7 +33,6 @@ const mainPage = document.querySelectorAll(".sbc");
         for (let i = 0; i < nolink.length; i++) {
             nolink[i].classList.remove("disable-link");
         };
-        sidebarBtn.classList.remove("sidebar-close");
     });
   })
 

@@ -1,3 +1,9 @@
+:root {
+  --mainblue: #333399;
+  --subblue: #7da7d9;
+  --dark-palette: #252728;
+  --white-palette: #e5e5e5;
+}
 body {
   background-color: #F3F4F6;
   background-image: url(gallery/480p/mainbg-mobile.png);
@@ -9,7 +15,7 @@ body {
   background-image: url(gallery/480p/processheader-mobile.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: #333399;
+  background-color: var(--mainblue);
   color: rgb(236, 236, 236);
   display: flex;
   justify-content: flex-start;
@@ -43,14 +49,14 @@ body {
 .group-section {
   display: block;
   opacity: 1;
-  color: #333399;
+  color: var(--mainblue);
   font-family: "Poppins-Medium", Helvetica, sans-serif;
 }
 
 .term-title {
   padding: 0.875rem;
   font-family: "Poppins-Bold", Helvetica, sans-serif;
-  color: #333399;
+  color: var(--mainblue);
   transition: 0.4s ease-in;
 }
 
@@ -59,12 +65,12 @@ body {
   padding: 0 0.875rem;
   padding-bottom: 0.875rem;
   font-family: "DM-Sans-Regular";
-  color: #252728;
+  color: var(--dark-palette);
   transition: 0.4s ease-in;
 }
 
 .highlight {
-  background-color: #333399;
+  background-color: var(--mainblue);
   > .term-title {
     color: white;
   }

@@ -29,7 +29,13 @@
 }
 /*FONT ENDS HERE*/
 
-
+:root {
+  --purewhite-svg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
+  --mainblue-svg: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(1541%) hue-rotate(223deg) brightness(97%) contrast(104%);
+  --mainblue: #333399;
+  --subblue: #7da7d9;
+  --smokewhite: #f3f4f6;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -91,17 +97,23 @@ a {
 }
 
 .togglemobile, .toggledesktop {
-  top: 4rem;
   left: 0;
   padding: 0.8rem 1rem;
   display: flex;
   justify-content: space-between;
   span {
-    color: #333399;
+    color: var(--mainblue);
   }
 }
 
+.togglemobile {
+  top: 0rem;
+  height: 4rem;
+  align-items: center;
+}
+
 .toggledesktop {
+  top: 4rem;
   display: none;
   position: fixed;
   width: 25%;
@@ -126,7 +138,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #7da7d9;
+  background-color: var(--subblue);
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 0.75rem;
@@ -176,12 +188,12 @@ a {
 /*sidebar starts here*/
 .mobile-sidebar {
   position: fixed;
-  top: 4rem;
+  top: 0rem;
   left: 0;
   z-index: 2;
   display: block;
   white-space: nowrap;
-  height: 95%;
+  height: 100%;
   width: 0;
   background-color: #f4f4f4;
   transition: 0.2s ease-out;
@@ -194,10 +206,6 @@ a {
   cursor: pointer;
   width: 2rem;
 }
-
-.sidebar-close {
-  content: url(ico/light-mode/sidebarclose-blue.svg);
-}
 .desktop-sidebar {
   position: fixed;
   top: 7rem;
@@ -208,7 +216,7 @@ a {
   height: 100vh;
   width: 25%;
   overflow-y: hidden;
-  border-bottom: 1px solid #333399;
+  border-bottom: 1px solid var(--mainblue);
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.19);
   backdrop-filter: blur(5.8px);
@@ -225,14 +233,14 @@ a {
 .list-header {
   list-style-type: none;
   padding: 1rem 0;
-  p {
-    color: #333399;
-    opacity: 0.5;
+  h4 {
+    color: var(--mainblue);
+    padding-left: 3rem;
   }
 }
 .list-header:first-of-type {
-  border-top: 2px solid #333399;
-  border-bottom: 2px solid #333399;
+  border-top: 2px solid var(--mainblue);
+  border-bottom: 2px solid var(--mainblue);
 }
 
 .list-name {
@@ -242,40 +250,39 @@ a {
     border-radius: 6px;
     cursor: pointer;
     list-style-position: inside;
+    margin: 0.5rem 0;
+    -webkit-transition: .3s;
+    transition: .3s;
     a {
       display: flex;
       padding-left: 2rem;
+      margin-right: 0.5rem;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       width: inherit;
-      color: #333399;
+      color: var(--mainblue);
+      overflow-x: hidden;
+      font-family: "Poppins-Regular",  Helvetica, sans-serif;
     }
   }
   > li:hover {
-    background-color: #333399;
+    -webkit-transform: translateX(0.5rem);
+    -ms-transform: translateX(0.5rem);
+    transform: translateX(0.5rem);
+    background-color: var(--mainblue);
     a {
       color: white;
     }
   }
-}
-
-.doclist {
   > li:before {
-    content: url(ico/sidebar-doc.svg);
+    content: url(ico/light-mode/enter.svg);
     position: absolute;
     left: 0.4rem;
-    top: 50%;
-    margin-top: -0.7rem;
+    top: 25%;
+    filter: var(--mainblue-svg);
   }
-}
-
-.loclist {
-  >li:before {
-    content: url(ico/sidebar-loc.svg);
-    position: absolute;
-    left: 0.4rem;
-    top: 50%;
-    margin-top: -0.7rem;
+  > li:hover::before {
+    filter: var(--purewhite-svg);
   }
 }
 
@@ -341,16 +348,14 @@ a {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 
 }
-
 .viewcard:hover {
-  background-color: #333399;
+  background-color: var(--mainblue);
   .card-name {
     h4 {
       color: white;
     }
   }
 }
-
 .viewcard .card-image {
   margin: 0.75rem;
   width: 3.5rem;
@@ -358,24 +363,22 @@ a {
   transition: transform 0.5s;
   overflow: hidden;
 }
-
 .card-name {
   h4 {
     font-family: "Poppins-Bold";
-    color: #333399;
+    color: var(--mainblue);
   }
   margin-left: 0.75rem;
 }
-
 .viewcard::after {
-  content: url(ico/light-mode/enter-blue.svg);
+  content: url(ico/light-mode/enter.svg);
   position: absolute;
   right: 1rem;
   margin-top: 0.41rem;
+  filter: var(--mainblue-svg)
 }
-
 .viewcard:hover::after {
-  content: url(ico/light-mode/enter-white.svg);
+  filter: var(--purewhite-svg)
 }
 
 /*tablet screen*/
@@ -420,7 +423,7 @@ a {
     .school-name {
       display: block;
       margin-left: 0.8rem;
-      color: #333399;
+      color: var(--mainblue);
       font-family: "Poppins-Bold";
     }
   }

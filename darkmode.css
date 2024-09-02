@@ -1,201 +1,212 @@
+:root {
+  --gold: brightness(0) saturate(100%) invert(96%) sepia(9%) saturate(1857%) hue-rotate(350deg) brightness(95%) contrast(87%);
+  --dark: brightness(0) saturate(100%) invert(11%) sepia(2%) saturate(1343%) hue-rotate(155deg) brightness(92%) contrast(88%);
+  --white: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(2470%) hue-rotate(237deg) brightness(116%) contrast(80%);
+  --gold-palette: #e3d585;
+  --dark-palette: #252728;
+  --white-palette: #e5e5e5;
+}
 .toggledark {
   background-color: #121212;
   background-image: url(gallery/480p/mainbgdark-mobile.png);
 
   .header {
-    background-color: #252728;
+    background-color: var(--dark-palette);
   }
   .sidebar-open {
-    content: url(ico/dark-mode/sidebaropen-gold.svg);
-  }
-  .sidebar-close {
-    content: url(ico/dark-mode/sidebarclose-gold.svg);
+    filter: var(--gold);
   }
   .gctlogo {
-    content: url(ico/dark-mode/gct-gold.png);
+    filter: var(--gold);
   }
   .applogo {
-    content: url(ico/dark-mode/logoonly-gold.svg);
+    filter: var(--gold);
   }
   .search-btn {
-    content: url(ico/dark-mode/search-gold.svg);
+    filter: var(--gold);
   }
 /*sidebars*/
   .list-header {
-    p {
-      color: #e3d585;
+    h4 {
+      color: var(--gold-palette);
     }
   }
   .list-name {
     a {
-      color: #e3d585;
+      color: var(--gold-palette);
     }
     > li:hover {
-      background-color: #e3d585;
+      background-color: var(--gold-palette);
       a {
-        color: #252728;
+        color: var(--dark-palette);
       }
+    }
+    > li::before {
+      filter: brightness(0) saturate(100%) invert(77%) sepia(16%) saturate(855%) hue-rotate(14deg) brightness(108%) contrast(90%);
+    }
+    > li:hover::before {
+      filter: brightness(0) saturate(100%) invert(10%) sepia(12%) saturate(279%) hue-rotate(155deg) brightness(93%) contrast(86%);
     }
   }
   .togglemobile, .toggledesktop {
     span {
-      color: #e3d585;
+      color: var(--gold-palette);
     }
   }
   .mobile-sidebar {
-    background-color: #252728;
+    background-color: var(--dark-palette);
   }
   .desktop-sidebar {
     background: rgba(21, 20, 20, 0.19);
   }
   .list-header:first-of-type {
-    border-color: #e3d585;
+    border-color: var(--gold-palette);
   }
 /*main*/
   .main-title {
     img {
-      content: url(ico/dark-mode/maintitle-gold.svg); 
+      filter: var(--gold); 
     }
   }
   .viewcard {
-    background-color: #252728;
+    background-color: var(--dark-palette);
     transition: none;
   }
   .viewcard::after {
-    content: url(ico/dark-mode/enter-gold.svg);
+    filter: var(--gold); 
   }
   .viewcard:hover {
-    background-color: #e3d585;
+    background-color: var(--gold-palette);
     .card-name {
       h4 {
-        color: #252728;
+        color: var(--dark-palette);
       }
     }
   }
   .viewcard:hover::after {
-    content: url(ico/dark-mode/enter-dark.svg);
+    filter: var(--dark);
   }
   .card-name {
     h4 {
-      color: #e3d585;
+      color: var(--gold-palette);
     }
   }
 /*================PROCESS CSS===================*/
   .process-header {
     background-image: url(gallery/480p/processheaderdark-mobile.png);
-    color: #252728;
+    color: var(--dark-palette);
     img {
-      content: url(ico/dark-mode/arrow-back-dark.svg);
+      filter: var(--dark);
     }
   }
   .process-title {
-    color: #252728;
+    color: var(--dark-palette);
   }
   .procedure {
     h3 {
-      color: #e5e5e5;
+      color: var(--white-palette);
     }
   }
   .container {
-    background-color: #252728;
+    background-color: var(--dark-palette);
   }
   .accordion-header {
-    background-color: #252728;
+    background-color: var(--dark-palette);
   }
   .accordion-label {
     h4 {
-      color: #e3d585;
+      color: var(--gold-palette);
     }
   }
   .accordion-label::before {
-    content: url(ico/dark-mode/unchecked\ box-gold.svg);
+    filter: var(--gold);
   }
   .accordion-label::after {
-    content: url(ico/dark-mode/collapse-down-gold.svg);
+    filter: var(--gold);
   }
   .accordion-panel {
-    color: #e5e5e5;
+    color: var(--white-palette);
   }
   .active {/*crucial shit*/
     .accordion-header {
-      background-color: #e3d585;
+      background-color: var(--gold-palette);
     }
     .accordion-label {
       h4 {
-        color: #252728;
+        color: var(--dark-palette);
       }
     }
     .accordion-label::after {
-      content: url(ico/dark-mode/collapse-up.svg);
+      filter: var(--dark);
     }
     .accordion-label::before {
-      content: url(ico/dark-mode/unchecked\ box.svg);
+      filter: var(--dark);
     }
   }
   .done {
     .accordion-label::before {
-      content: url(ico/dark-mode/checked\ box-gold.svg);
+      filter: var(--gold); 
     }
   }
   .done.active {
     .accordion-label::before {
-      content: url(ico/dark-mode/checked\ box.svg);
+      filter: var(--dark);
     }
   }
   .next-button {
-    color: #252728;
-    background-color: #e3d585;
+    color: var(--dark-palette);
+    background-color: var(--gold-palette);
   }
   .back-button {
-    border-color: #e3d585;
-    color: #e3d585;
-    background-color: #252728;
+    border-color: var(--gold-palette);
+    color: var(--gold-palette);
+    background-color: var(--dark-palette);
   }
   /*===========CONTENT CSS==============*/
   .collapsible-header::after {
-    content: url(ico/light-mode/collapse-down.svg);
+    filter: var(--white);
   }
   .collapsible-header:hover {
-    background-color: #e3d585;
-    color: #252728;
+    background-color: var(--gold-palette);
+    color: var(--dark-palette);
   }
   .collapsible-header:hover::after {
-    content: url(ico/dark-mode/collapse-down.svg);
+    filter: var(--dark);
   }
   .open {
-    background-color: #e3d585;
-    color: #252728;
+    background-color: var(--gold-palette);
+    color: var(--dark-palette);
   }
   .open::after {
-    content: url(ico/dark-mode/collapse-up.svg);
+    filter: var(--dark);
   }
   .open:hover::after {
-    content: url(ico/dark-mode/collapse-up.svg);
+    filter: var(--dark);
   }
   /*============GLOSSARY CSS==============*/
   .glossary-header {
     background-image: url(gallery/480p/processheaderdark-mobile.png);
-    background-color: #e3d585;
+    background-color: var(--gold-palette);
   }
   .group-section {
-    color: #e5e5e5;
+    color: var(--white-palette);
   }
   .term {
-    background-color: #252728;
+    background-color: var(--dark-palette);
   }
   .term-title {
-    color: #e3d585;
+    color: var(--gold-palette);
   }
   .term-desc {
-    color: #e5e5e5;
+    color: var(--white-palette);
   }
   .highlight {
-    background-color: #e3d585;
+    background-color: var(--gold-palette);
     > .term-title {
-      color: #252728;
+      color: var(--dark-palette);
     }
     > .term-desc {
-      color: #252728;
+      color: var(--dark-palette);
     }
   }
 
@@ -211,7 +222,7 @@
   @media only screen and (min-width: 1025px) {
     .header {
       .school-name {
-        color: #e3d585;
+        color: var(--gold-palette);
       }
     }
     .process-header {

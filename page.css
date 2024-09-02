@@ -102,7 +102,7 @@ body {
   }
 }
 .accordion-label::before{
-  content: url(ico/light-mode/unchecked\ box.svg);
+  content: url(ico/light-mode/unchecked-circle.svg);
   left: 0.9rem;
   top: 1rem;
   position: absolute;
@@ -111,13 +111,22 @@ body {
 .accordion-label::after {
   content: url(ico/light-mode/collapse-down.svg);
   position: absolute;
+  top: 30%;
   right: 0.3rem;
-  bottom: 0.5rem;
   margin: 0rem 0.4rem;
   transform: scale(1.3);
 }
-
-
+.active {
+  opacity: 1;
+  .accordion-header {
+    border-bottom: 1px solid black;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .accordion-label::after {
+    transform: rotate(180deg) scale(1.3);;
+    top: 15%;
+  }
+}
 .accordion-panel {
   margin: 0 0;
   max-height: 0;
@@ -167,20 +176,9 @@ body {
   cursor: pointer;
 }
 
-.active {
-  opacity: 1;
-  .accordion-header {
-    border-bottom: 1px solid black;
-    border-radius: 8px 8px 0px 0px;
-  }
-  .accordion-label::after {
-    content: url(ico/light-mode/collapse-up.svg);
-  }
-}
-
 .done {
   .accordion-label::before{
-    content: url(ico/light-mode/checked\ box.svg);
+    content: url(ico/light-mode/checked-circle.svg);
   }
 }
 
@@ -206,7 +204,10 @@ body {
   .process-header {
     width: 50%;
     margin: 0 auto;
-    background-image: url(gallery/1152p/processheader-desktop.png)
+    background-image: url(gallery/1152p/processheader-desktop.png);
+    img {
+      transform: scale(1.3);
+    }
   }
 
   .procedure {
@@ -215,14 +216,24 @@ body {
     margin: 0.6rem 1.2rem;
     font-family: "Poppins-Medium", Helvetica, sans-serif;
   }
-
+  
   .accordion-label::before{
     left: 1rem;
     top: 1.1rem;
     position: absolute;
     transform: scale(2.4);
   }
-
+  .accordion-label::after {
+    transform: scale(2);
+    right: 0.5rem;
+    top: 35%;
+  }
+  .active {
+    .accordion-label::after {
+      transform: rotate(180deg) scale(2);;
+      top: 10%;
+    }
+  }
   .main-page {
     width: 50%;
     margin: 0 auto;

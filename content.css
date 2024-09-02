@@ -1,3 +1,13 @@
+:root {
+  --purewhite-svg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
+  --mainblue-svg: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(1541%) hue-rotate(223deg) brightness(97%) contrast(104%);
+  --dark: brightness(0) saturate(100%) invert(11%) sepia(2%) saturate(1343%) hue-rotate(155deg) brightness(92%) contrast(88%);
+  --white: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(2470%) hue-rotate(237deg) brightness(116%) contrast(80%);
+  --mainblue: #333399;
+  --subblue: #7da7d9;
+  --dark-palette: #252728;
+  --white-palette: #e5e5e5;
+}
 .content {
   p, ul, li, em, strong{
     font-size: 0.875rem;
@@ -45,9 +55,10 @@
 }
 .collapsible-header::after {
   position: absolute;
-  content: url(ico/dark-mode/collapse-down.svg);
-  width: 1.25rem;
+  content: url(ico/light-mode/collapse-down.svg);
+  top: -5%;
   margin-left: 0.2rem;
+  filter: var(--dark)
 }
 .collapsible-header:hover {
   background-color: #7da7d9;
@@ -55,7 +66,7 @@
 }
 
 .collapsible-header:hover::after {
-  content: url(ico/light-mode/collapse-down.svg);
+  filter: initial;
 }
 
 .open {
@@ -63,18 +74,28 @@
   color: white;
 }
 .open::after {
-  position: absolute;
-  content: url(ico/light-mode/collapse-up.svg);
-  width: 1.25rem;
-  margin-left: 0.2rem;
+  transform: rotate(180deg);
+  top: -30%;
+  filter: initial;
 }
 
 .open:hover::after {
-  content: url(ico/light-mode/collapse-up.svg);
+  transform: rotate(180deg);
+  filter: initial;
 }
 
 .collapsible-panel {
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease-out;
+}
+
+@media only screen and (min-width: 1025px) {
+  .collapsible-header::after {
+    top: 10%;
+  }
+
+  .open::after {
+    top: -10%;
+  }
 }
