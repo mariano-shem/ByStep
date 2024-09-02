@@ -24,10 +24,9 @@ function repositionTerm() {
         });
 
         colorChange = setTimeout(() =>{
-          termDiv.style.backgroundColor = "rgb(241, 211, 62)";
-  
+          termDiv.classList.toggle("highlight");
           colorReset = setTimeout(() => {
-            termDiv.style.backgroundColor = "#D7D7D7";
+            termDiv.classList.toggle("highlight");
           }, 1200);
         }, 500);
 
@@ -36,5 +35,7 @@ function repositionTerm() {
     }
   }
 }
-
+if(localStorage.getItem("darkMode") === "on") {
+  document.querySelector("body").classList.add("toggledark");
+}
 window.onload = repositionTerm();

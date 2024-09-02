@@ -374,6 +374,10 @@ a {
   margin-top: 0.41rem;
 }
 
+.viewcard:hover::after {
+  content: url(ico/light-mode/enter-white.svg);
+}
+
 /*tablet screen*/
 @media only screen and (min-width: 481px) and (max-width: 1024px){
   body {

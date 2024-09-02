@@ -1,8 +1,15 @@
+body {
+  background-color: #F3F4F6;
+  background-image: url(gallery/480p/mainbg-mobile.png);
+  background-attachment: fixed;
+}
 .glossary-header {
   position: relative;
   z-index: 1;
-  background-color: rgb(61, 61, 61);
-  border: 1px solid black;
+  background-image: url(gallery/480p/processheader-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #333399;
   color: rgb(236, 236, 236);
   display: flex;
   justify-content: flex-start;
@@ -17,26 +24,34 @@
 
 .main-page {
   padding-top: 0.75rem;;
+   /* From https://css.glass */
+   background: rgba(255, 255, 255, 0.19);
+   backdrop-filter: blur(5.8px);
+   -webkit-backdrop-filter: blur(5.8px);
 }
 .term {
   min-height: 100px;
   width: 100%;
   overflow: hidden;
   margin: 0.75rem 1.5rem ;
-  border: 1px solid black;
   border-radius: 12px;
-  background-color: #D7D7D7;
+  background-color: white;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   transition: 0.4s ease-in;
 }
 
 .group-section {
   display: block;
   opacity: 1;
+  color: #333399;
+  font-family: "Poppins-Medium", Helvetica, sans-serif;
 }
 
 .term-title {
   padding: 0.875rem;
   font-family: "Poppins-Bold", Helvetica, sans-serif;
+  color: #333399;
+  transition: 0.4s ease-in;
 }
 
 .term-desc {
@@ -44,15 +59,36 @@
   padding: 0 0.875rem;
   padding-bottom: 0.875rem;
   font-family: "DM-Sans-Regular";
+  color: #252728;
+  transition: 0.4s ease-in;
 }
 
+.highlight {
+  background-color: #333399;
+  > .term-title {
+    color: white;
+  }
+  > .term-desc {
+    color: white;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-image: url(gallery/768p/mainbg-tab.png);
+  }
+  .glossary-header {
+    background-image: url(gallery/768p/processheader-tab.png);
+  }
+}
 @media only screen and (min-width: 1025px) {
   body {
     display: block;
+    background-image: url(gallery/1152p/mainbg-desktop.png)
   }
   .glossary-header {
     width: 50%;
     margin: 0 auto;
+    background-image: url(gallery/1152p/processheader-desktop.png);
   }
   .main-page {
     width: 50%;

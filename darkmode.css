@@ -5,7 +5,6 @@
   .header {
     background-color: #252728;
   }
-
   .sidebar-open {
     content: url(ico/dark-mode/sidebaropen-gold.svg);
   }
@@ -73,12 +72,15 @@
       }
     }
   }
+  .viewcard:hover::after {
+    content: url(ico/dark-mode/enter-dark.svg);
+  }
   .card-name {
     h4 {
       color: #e3d585;
     }
   }
-/*================PROCESS PAGE===================*/
+/*================PROCESS CSS===================*/
   .process-header {
     background-image: url(gallery/480p/processheaderdark-mobile.png);
     color: #252728;
@@ -86,11 +88,9 @@
       content: url(ico/dark-mode/arrow-back-dark.svg);
     }
   }
-
   .process-title {
     color: #252728;
   }
-
   .procedure {
     h3 {
       color: #e5e5e5;
@@ -116,8 +116,6 @@
   .accordion-panel {
     color: #e5e5e5;
   }
-
-
   .active {/*crucial shit*/
     .accordion-header {
       background-color: #e3d585;
@@ -153,7 +151,6 @@
     color: #e3d585;
     background-color: #252728;
   }
-
   /*===========CONTENT CSS==============*/
   .collapsible-header::after {
     content: url(ico/light-mode/collapse-down.svg);
@@ -175,8 +172,39 @@
   .open:hover::after {
     content: url(ico/dark-mode/collapse-up.svg);
   }
+  /*============GLOSSARY CSS==============*/
+  .glossary-header {
+    background-image: url(gallery/480p/processheaderdark-mobile.png);
+    background-color: #e3d585;
+  }
+  .group-section {
+    color: #e5e5e5;
+  }
+  .term {
+    background-color: #252728;
+  }
+  .term-title {
+    color: #e3d585;
+  }
+  .term-desc {
+    color: #e5e5e5;
+  }
+  .highlight {
+    background-color: #e3d585;
+    > .term-title {
+      color: #252728;
+    }
+    > .term-desc {
+      color: #252728;
+    }
+  }
+
+  /*=-=-=-=-=-=-=-=RESPONSIVE SCREENS=-=-=-=-=-=-=-=*/
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     .process-header {
+      background-image: url(gallery/768p/processheaderdark-tab.png);
+    }
+    .glossary-header {
       background-image: url(gallery/768p/processheaderdark-tab.png);
     }
   }
@@ -186,8 +214,10 @@
         color: #e3d585;
       }
     }
-
     .process-header {
+      background-image: url(gallery/1152p/processheaderdark-desktop.png);
+    }
+    .glossary-header {
       background-image: url(gallery/1152p/processheaderdark-desktop.png);
     }
   }
