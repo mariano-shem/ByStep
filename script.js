@@ -2,51 +2,65 @@ let w = document.documentElement.clientWidth || window.innerWidth;
 const nolink = document.querySelectorAll(".viewcard");
 const sidebarMenu = document.querySelector(".mobile-sidebar");
 const sidebarBtn = document.querySelector(".sidebar-open");
-
+const mainPage = document.querySelectorAll(".sbc");
   sidebarBtn.addEventListener("click",
     function() {
       this.classList.toggle("sidebar-close");
       if(sidebarMenu.style.width) {
         sidebarMenu.style.width = null;
-        document.querySelector(".main-page").style.opacity = "1";
+        for(i = 0; i < mainPage.length; i++) {
+          mainPage[i].style.opacity = "1";
+        }
         for (let i = 0; i < nolink.length; i++) {
             nolink[i].classList.remove("disable-link");
         };
       } else {
         sidebarMenu.style.width = "75%";
-        document.querySelector(".main-page").style.opacity = "0.3";
+        for(i = 0; i < mainPage.length; i++) {
+          mainPage[i].style.opacity = "0.3";
+        }
         for (let i = 0; i < nolink.length; i++) {
             nolink[i].classList.add("disable-link");
         };
       }
   });
-  
-  document.querySelector(".main-page").addEventListener("click",
-    function() {
-      sidebarMenu.style.width = null;
-      document.querySelector(".main-page").style.opacity = "1";
-      for (let i = 0; i < nolink.length; i++) {
-          nolink[i].classList.remove("disable-link");
-      };
-      sidebarBtn.classList.remove("sidebar-close");
-  });
+  mainPage.forEach(function(button) {
+    button.addEventListener("click",
+      function() {
+        sidebarMenu.style.width = null;
+        for(i = 0; i < mainPage.length; i++) {
+          mainPage[i].style.opacity = "1";
+        }
+        for (let i = 0; i < nolink.length; i++) {
+            nolink[i].classList.remove("disable-link");
+        };
+        sidebarBtn.classList.remove("sidebar-close");
+    });
+  })
 
-const checkmode = document.querySelector("#toggledark-btn");
+const checkmode = document.querySelectorAll(".toggledark-btn");
 const body = document.querySelector("body");
+const mobileBtn = document.querySelector(".tgm");
+const desktopBtn = document.querySelector(".tgd");
 
-checkmode.addEventListener("change", 
-  function() {
-    body.classList.toggle("toggledark");
-    if(body.classList.contains("toggledark")) {
-      localStorage.setItem("darkMode", "on")
-      this.checked = true;
-    } else {
-      localStorage.setItem("darkMode", "off")
-      this.checked = false;
-    }
+checkmode.forEach(function(button) {
+  button.addEventListener("change", 
+    function() {
+      body.classList.toggle("toggledark");
+      if(body.classList.contains("toggledark")) {
+        localStorage.setItem("darkMode", "on")
+        mobileBtn.checked = true;
+        desktopBtn.checked = true;
+      } else {
+        localStorage.setItem("darkMode", "off")
+        mobileBtn.checked = false;
+        desktopBtn.checked = false;
+      }
+  })
 })
 
 if(localStorage.getItem("darkMode") === "on") {
   body.classList.add("toggledark");
-  checkmode.checked = true;
+  mobileBtn.checked = true;
+  desktopBtn.checked = true;
 } 

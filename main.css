@@ -90,9 +90,7 @@ a {
   }
 }
 
-.togglemode {
-  position: fixed;
-  width: 25%;
+.togglemobile, .toggledesktop {
   top: 4rem;
   left: 0;
   padding: 0.8rem 1rem;
@@ -101,6 +99,12 @@ a {
   span {
     color: #333399;
   }
+}
+
+.toggledesktop {
+  display: none;
+  position: fixed;
+  width: 25%;
 }
 
 .toggle {
@@ -139,10 +143,10 @@ a {
   transition: .4s;
   border-radius: 0.6rem;
 }
-#toggledark-btn:checked + .slider {
+.toggledark-btn:checked + .slider {
   background-color: #e3d585;
 }
-#toggledark-btn:checked + .slider::before {
+.toggledark-btn:checked + .slider::before {
   background-color: #252728;
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
@@ -196,7 +200,7 @@ a {
 }
 .desktop-sidebar {
   position: fixed;
-  top: 8rem;
+  top: 7rem;
   left: 0;
   z-index: 2;
   display: none;
@@ -415,6 +419,9 @@ a {
       color: #333399;
       font-family: "Poppins-Bold";
     }
+  }
+  .toggledesktop {
+    display: flex;
   }
 
   .section {

@@ -38,7 +38,7 @@
       }
     }
   }
-  .togglemode {
+  .togglemobile, .toggledesktop {
     span {
       color: #e3d585;
     }
@@ -81,10 +81,14 @@
 /*================PROCESS PAGE===================*/
   .process-header {
     background-image: url(gallery/480p/processheaderdark-mobile.png);
+    color: #252728;
+    img {
+      content: url(ico/dark-mode/arrow-back-dark.svg);
+    }
   }
 
   .process-title {
-    color: #e5e5e5;
+    color: #252728;
   }
 
   .procedure {

@@ -13,6 +13,9 @@ body {
   padding: 0.8rem;
   background-repeat: no-repeat;
   background-size: 100%;
+  img {
+    content: url(ico/light-mode/arrow-back.svg);
+  }
 }
 
 .back-home {
