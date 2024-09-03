@@ -33,10 +33,10 @@
   }
   .list-name {
     a {
-      color: var(--gold-palette);
+      color: var(--white-palette);
     }
     > li:hover {
-      background-color: var(--gold-palette);
+      background-image: linear-gradient(to right, rgba(227, 213, 133, 1),rgba(227, 213, 133, 0));
       a {
         color: var(--dark-palette);
       }
@@ -88,7 +88,7 @@
   }
   .card-name {
     h4 {
-      color: var(--gold-palette);
+      color: var(--white-palette);
     }
   }
 /*================PROCESS CSS===================*/
