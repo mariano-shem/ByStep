@@ -16,7 +16,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: var(--mainblue);
-  color: rgb(236, 236, 236);
+  color: var(--white-palette);
   display: flex;
   justify-content: flex-start;
   align-items: center;

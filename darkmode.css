@@ -94,6 +94,7 @@
 /*================PROCESS CSS===================*/
   .process-header {
     background-image: url(gallery/480p/processheaderdark-mobile.png);
+    background-color: var(--gold-palette);
     color: var(--dark-palette);
     img {
       filter: var(--dark);
@@ -187,6 +188,7 @@
   .glossary-header {
     background-image: url(gallery/480p/processheaderdark-mobile.png);
     background-color: var(--gold-palette);
+    color: var(--dark-palette);
   }
   .group-section {
     color: var(--white-palette);
