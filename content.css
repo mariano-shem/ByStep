@@ -9,9 +9,12 @@
   --white-palette: #e5e5e5;
 }
 .content {
-  p, ul, li, em, strong{
+  p, ul, li, em, strong, a{
     font-size: 0.875rem;
     font-family: "DM-Sans-Regular";
+  }
+  a {
+    color: var(--subblue);
   }
   h5 {
   font-size: 0.875rem;
@@ -21,12 +24,11 @@
     padding-bottom: 0.5rem;
   }
 }
-
 .content > h5 {
   padding: 0.75rem 0;
 }
-
 .content > p {
+  position: relative;
   padding-left: 1rem;
 }
 .content > ul {
@@ -36,7 +38,6 @@
     list-style-type: disc;
   }
 }
-
 .sublist-content {
   list-style-type: none;
   > li > ul {
@@ -44,7 +45,6 @@
     list-style-type: disc;
   }
 }
-
 .collapsible-header {
   user-select: none;
   cursor: pointer;
@@ -64,11 +64,9 @@
   background-color: #7da7d9;
   color: white;
 }
-
 .collapsible-header:hover::after {
   filter: initial;
 }
-
 .open {
   background-color: #7da7d9;
   color: white;
@@ -78,18 +76,20 @@
   top: -30%;
   filter: initial;
 }
-
 .open:hover::after {
   transform: rotate(180deg);
   filter: initial;
 }
-
 .collapsible-panel {
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease-out;
 }
-
+.elink {
+  content: url(ico/light-mode/link2.svg);
+  cursor: pointer;
+  padding-right: 0.2rem;
+}
 @media only screen and (min-width: 1025px) {
   .collapsible-header::after {
     top: 10%;

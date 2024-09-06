@@ -65,7 +65,7 @@ async function loadAccordionContents() {
     setTimeout(() => {
       openAccordion()
       openCollapsible()
-      }, 100)
+      }, 500)
   }
 }
 loadAccordionContents();

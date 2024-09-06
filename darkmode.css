@@ -112,46 +112,26 @@
     background-color: var(--dark-palette);
   }
   .accordion-header {
-    background-color: var(--dark-palette);
+    background-color: var(--gold-palette);
+    opacity: 0.4;
   }
   .accordion-label {
     h4 {
-      color: var(--gold-palette);
+      color: var(--dark-palette);
     }
   }
   .accordion-label::before {
-    filter: var(--gold);
+    filter: var(--dark);
   }
   .accordion-label::after {
-    filter: var(--gold);
+    filter: var(--dark);
   }
   .accordion-panel {
     color: var(--white-palette);
   }
   .active {/*crucial shit*/
     .accordion-header {
-      background-color: var(--gold-palette);
-    }
-    .accordion-label {
-      h4 {
-        color: var(--dark-palette);
-      }
-    }
-    .accordion-label::after {
-      filter: var(--dark);
-    }
-    .accordion-label::before {
-      filter: var(--dark);
-    }
-  }
-  .done {
-    .accordion-label::before {
-      filter: var(--gold); 
-    }
-  }
-  .done.active {
-    .accordion-label::before {
-      filter: var(--dark);
+      opacity: 1;
     }
   }
   .next-button {
@@ -162,6 +142,9 @@
     border-color: var(--gold-palette);
     color: var(--gold-palette);
     background-color: var(--dark-palette);
+  }
+  .pre-note {
+    color: var(--white-palette);
   }
   /*===========CONTENT CSS==============*/
   .collapsible-header::after {

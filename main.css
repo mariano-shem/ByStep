@@ -454,6 +454,9 @@ a {
   .desktop-sidebar {
     display: block;
   }
+  .sidebar-footer {
+    height: 20vh;
+  }
   .search-btn {
     width: 50px;
   }
