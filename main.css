@@ -1,31 +1,31 @@
 @font-face {
   font-family: "Poppins-Regular";
-  src: url(font/Poppins/Poppins-Regular.ttf);
+  src: url(assets/font/Poppins/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: "Poppins-Medium";
-  src: url(font/Poppins/Poppins-Medium.ttf);
+  src: url(assets/font/Poppins/Poppins-Medium.ttf);
 }
 
 @font-face {
   font-family: "Poppins-Bold";
-  src: url(font/Poppins/Poppins-Bold.ttf);
+  src: url(assets/font/Poppins/Poppins-Bold.ttf);
 }
 
 @font-face {
   font-family: "DM-Sans-Regular";
-  src: url(font/DM_Sans/DMSans-Regular.ttf);
+  src: url(assets/font/DM_Sans/DMSans-Regular.ttf);
 }
 
 @font-face {
   font-family: "DM-Sans-Medium";
-  src: url(font/DM_Sans/DMSans-Medium.ttf);
+  src: url(assets/font/DM_Sans/DMSans-Medium.ttf);
 }
 
 @font-face {
   font-family: "DM-Sans-Bold";
-  src: url(font/DM_Sans/DMSans-Bold.ttf);
+  src: url(assets/font/DM_Sans/DMSans-Bold.ttf);
 }
 /*FONT ENDS HERE*/
 
@@ -48,7 +48,7 @@
 
 body {
   background-color: #F3F4F6;
-  background-image: url(gallery/480p/mainbg-mobile.png);
+  background-image: url(assets/gallery/480p/mainbg-mobile.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -169,12 +169,8 @@ a {
   width: 2rem;
   margin-left: 0.8rem;
 }
-
-.gctlogo {
-  content: url(ico/light-mode/gct-blue.png);
-}
 .applogo {
-  content: url(ico/light-mode/logoonly-blue.svg);
+  content: url(assets/ico/light-mode/logoonly-blue.svg);
 }
 
 .search-btn {
@@ -182,7 +178,7 @@ a {
   right: 0;
   margin-right: 1rem;
   width: 2rem;
-  content: url(ico/light-mode/search-blue.svg);
+  content: url(assets/ico/light-mode/search-blue.svg);
 }
 
 /*sidebar starts here*/
@@ -203,7 +199,7 @@ a {
 }
 
 .sidebar-open {
-  content: url(ico/light-mode/sidebaropen-blue.svg);
+  content: url(assets/ico/light-mode/sidebaropen-blue.svg);
   cursor: pointer;
   width: 2rem;
 }
@@ -248,7 +244,7 @@ a {
 
 .doclist {
   > h4::before {
-    content: url(ico/light-mode/folder.svg);
+    content: url(assets/ico/light-mode/folder.svg);
     position: absolute;
     left: 0.5rem;
     top: -10%;
@@ -256,7 +252,7 @@ a {
 }
 .loclist {
   > h4::before {
-    content: url(ico/light-mode/location.svg);
+    content: url(assets/ico/light-mode/location.svg);
     position: absolute;
     left: 0.5rem;
     top: -10%;
@@ -310,14 +306,20 @@ a {
 
 /*main title starts here*/
 .main-title {
-  display: flex;
-  justify-content: center;
-  height: 12rem;
-  margin-bottom: 2rem;
+  display: block;
+  margin: 1rem 0;
+  i {
+    content: url(assets/ico/light-mode/gct-blue.png);
+    display: block;
+    width: 4rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
   img {
-    content: url(ico/light-mode/maintitle-blue.svg);
+    content: url(assets/ico/light-mode/maintitle-blue.svg);
     display: block;
     width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -382,7 +384,7 @@ a {
   margin-left: 0.75rem;
 }
 .viewcard::after {
-  content: url(ico/light-mode/enter.svg);
+  content: url(assets/ico/light-mode/enter.svg);
   position: absolute;
   right: 1rem;
   margin-top: 0.41rem;
@@ -395,7 +397,7 @@ a {
 /*tablet screen*/
 @media only screen and (min-width: 481px) and (max-width: 1024px){
   body {
-    background-image: url(gallery/768p/mainbg-tab.png);
+    background-image: url(assets/gallery/768p/mainbg-tab.png);
   }
   .main-title {
     margin-top: 2rem;
@@ -416,13 +418,17 @@ a {
     align-items: flex-start;
     background-size: 100%;
     background-position: 100% -10%;
-    background-image: url(gallery/1152p/mainbg-desktop.png);
+    background-image: url(assets/gallery/1152p/mainbg-desktop.png);
 
   }
   .main-title {
     width: 75%;
-    height: 25vh;
-    margin-bottom: 0;
+    img {
+      width: 60%;
+    }
+    i {
+      width: 5rem;
+    }
   }
   .main-page {
     margin: 0 2.5%;

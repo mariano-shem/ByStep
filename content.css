@@ -55,7 +55,7 @@
 }
 .collapsible-header::after {
   position: absolute;
-  content: url(ico/light-mode/collapse-down.svg);
+  content: url(assets/ico/light-mode/collapse-down.svg);
   top: -5%;
   margin-left: 0.2rem;
   filter: var(--dark)
@@ -86,7 +86,7 @@
   transition: all 0.2s ease-out;
 }
 .elink {
-  content: url(ico/light-mode/link2.svg);
+  content: url(assets/ico/light-mode/link2.svg);
   cursor: pointer;
   padding-right: 0.2rem;
 }

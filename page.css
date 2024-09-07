@@ -1,11 +1,11 @@
 body {
-  background-image: url(gallery/480p/mainbg-mobile.png);
+  background-image: url(assets/gallery/480p/mainbg-mobile.png);
   background-attachment: fixed;
 }
 .process-header {
   position: relative;
   z-index: 1;
-  background-image: url(gallery/480p/processheader-mobile.png);
+  background-image: url(assets/gallery/480p/processheader-mobile.png);
   background-color: #7da7d9;
   color: white;
   width: 100%;
@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   img {
-    content: url(ico/light-mode/arrow-back.svg);
+    content: url(assets/ico/light-mode/arrow-back.svg);
   }
 }
 
@@ -102,14 +102,14 @@ body {
   }
 }
 .accordion-label::before{
-  content: url(ico/light-mode/unchecked-circle.svg);
+  content: url(assets/ico/light-mode/unchecked-circle.svg);
   left: 0.9rem;
   top: 1rem;
   position: absolute;
   transform: scale(1.8);
 }
 .accordion-label::after {
-  content: url(ico/light-mode/collapse-down.svg);
+  content: url(assets/ico/light-mode/collapse-down.svg);
   position: absolute;
   top: 30%;
   right: 0.3rem;
@@ -178,7 +178,7 @@ body {
 
 .done {
   .accordion-label::before{
-    content: url(ico/light-mode/checked-circle.svg);
+    content: url(assets/ico/light-mode/checked-circle.svg);
   }
 }
 
@@ -188,10 +188,10 @@ body {
 /*tab mode*/
 @media only screen and (min-width: 481px) and (max-width: 1024px){
   body {
-    background-image: url(gallery/768p/mainbg-tab.png);
+    background-image: url(assets/gallery/768p/mainbg-tab.png);
   }
   .process-header {
-    background-image: url(gallery/768p/processheader-tab.png);
+    background-image: url(assets/gallery/768p/processheader-tab.png);
   }
 }
 /*desktop mode*/
@@ -201,13 +201,13 @@ body {
   }
 
   body {
-    background-image: url(gallery/1152p/mainbg-desktop.png);
+    background-image: url(assets/gallery/1152p/mainbg-desktop.png);
     display: block;
   }
   .process-header {
     width: 50%;
     margin: 0 auto;
-    background-image: url(gallery/1152p/processheader-desktop.png);
+    background-image: url(assets/gallery/1152p/processheader-desktop.png);
     img {
       transform: scale(1.3);
     }
