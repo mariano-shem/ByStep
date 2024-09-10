@@ -61,4 +61,31 @@ if(localStorage.getItem("darkMode") === "on") {
   body.classList.add("toggledark");
   mobileBtn.checked = true;
   desktopBtn.checked = true;
-} 
+}
+
+
+//SEARCH BAR LOGIC \/ \/ \/
+const searchBar = document.querySelectorAll(".search-bar");
+
+searchBar.forEach(
+  function(inputKey) {
+    inputKey.addEventListener("keyup", 
+      function() {
+        let findThis = this.value.toLowerCase();
+        let listName = document.querySelectorAll(".list-name");
+        for(i = 0; i < listName.length; i++) {
+          let listItem = listName[i].querySelectorAll("li");
+
+          for(j = 0; j < listItem.length; j++) {
+            let listLink = listItem[j].querySelectorAll("a")[0];
+            if (listLink.innerHTML.toLowerCase().indexOf(findThis) > -1) {
+              listItem[j].style.display = "";
+            } else {
+              listItem[j].style.display = "none";
+            }
+          }
+        }
+
+        
+    })
+})

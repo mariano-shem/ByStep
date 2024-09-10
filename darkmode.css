@@ -6,6 +6,37 @@
   --dark-palette: #252728;
   --white-palette: #e5e5e5;
 }
+.confirm-exit {
+  background-color: var(--dark-palette);
+  .confirm-msg, .confirm-title {
+
+    h3 {
+      color: var(--gold-palette);
+    }
+    p {
+      color: var(--white-palette);
+    }
+  }
+  .control-btns {
+    .c-button {
+      border-color: var(--gold-palette);
+    }
+    .confirm {
+      background-color: var(--gold-palette);
+      color: var(--dark-palette);
+    }
+    .cancel {
+      background-color: var(--dark-palette);
+      color: var(--white-palette);
+    }
+    .cancel:hover {
+      background-color: #38393a;
+    }
+    .confirm:hover {
+      background-color: #b3a96e;
+    }
+  }
+}
 .toggledark {
   background-color: #121212;
   background-image: url(assets/gallery/480p/mainbgdark-mobile.png);
@@ -19,8 +50,10 @@
   .applogo {
     filter: var(--gold);
   }
-  .search-btn {
-    filter: var(--gold);
+  .search-bar:focus {
+    outline-color: var(--gold-palette);
+    outline-width: medium;
+    outline-offset: -3px;
   }
 /*sidebars*/
   .list-header {
@@ -49,6 +82,9 @@
     span {
       color: var(--gold-palette);
     }
+  }
+  .togglemobile::after {
+    border-color: var(--gold-palette);
   }
   .mobile-sidebar {
     background-color: var(--dark-palette);
@@ -128,20 +164,20 @@
   }
   .accordion-panel {
     color: var(--white-palette);
+    .next-button {
+      color: var(--dark-palette);
+      background-color: var(--gold-palette);
+    }
+    .back-button {
+      border-color: var(--gold-palette);
+      color: var(--gold-palette);
+      background-color: var(--dark-palette);
+    }
   }
   .active {/*crucial shit*/
     .accordion-header {
       opacity: 1;
     }
-  }
-  .next-button {
-    color: var(--dark-palette);
-    background-color: var(--gold-palette);
-  }
-  .back-button {
-    border-color: var(--gold-palette);
-    color: var(--gold-palette);
-    background-color: var(--dark-palette);
   }
   .pre-note {
     color: var(--white-palette);
