@@ -88,11 +88,6 @@ backButton.forEach(function(button) {
   });
 });
 
-//check dark mode status
-if(localStorage.getItem("darkMode") === "on") {
-  document.querySelector("body").classList.add("toggledark");
-} 
-
 function confirmExit(confirmTitle, confirmMsg, cancelBtn, confirmBtn, link) {
   const content = "<div class=\"confirm-exit\">" +
   "<div class=\"confirm-title\"><h3>" + confirmTitle + "</h3></div>" +
@@ -130,3 +125,8 @@ finishButton.addEventListener("click",
       "Confirm",
       "../");
   });
+  
+//check dark mode status
+if(localStorage.getItem("darkMode") === "on") {
+  document.querySelector("body").classList.add("toggledark");
+} 
