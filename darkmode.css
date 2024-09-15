@@ -96,9 +96,9 @@
   }
 /*main*/
   .main-title {
-    i {
+    /* i {
       filter: var(--gold);
-    }
+    } */
     img {
       filter: var(--gold); 
     }
