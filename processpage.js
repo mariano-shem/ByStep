@@ -5,7 +5,7 @@ window.onbeforeunload = function () {
 //heart of the program.
 const nextButton = document.querySelectorAll(".next-button");
 const backButton = document.querySelectorAll(".back-button");
-const finishButton = document.querySelector(".finish-button");
+const finishButton = document.querySelectorAll(".finish-button");
 
 //next button function
 
@@ -116,14 +116,17 @@ function confirmExit(confirmTitle, confirmMsg, cancelBtn, confirmBtn, link) {
   );
 }
 
-finishButton.addEventListener("click", 
+finishButton.forEach(
   function(button) {
-    button.preventDefault();
-    confirmExit("Finish Process?", 
-      "This will take you back to the home page.", 
-      "Cancel", 
-      "Confirm",
-      "../");
+    button.addEventListener("click", 
+    function(button) {
+      button.preventDefault();
+      confirmExit("Finish Process?", 
+        "This will take you back to the home page.", 
+        "Cancel", 
+        "Confirm",
+        "../");
+    });
   });
   
 //check dark mode status

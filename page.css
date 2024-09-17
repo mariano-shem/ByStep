@@ -104,7 +104,26 @@ body {
     }
   }
 }
-
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.id-tab {
+  width: 50%;
+  height: 3rem;
+  border: none;
+  border-bottom: 1px solid #333399;
+  background-color: #7da7d9;
+  color: #f3f4f6;
+}
+.id-tab:first-of-type {
+  border-right: 1px solid #333399;
+}
+.selected {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.0);
+  color: #121212;
+}
 .procedure {
   display: block;
   margin: 0.4rem 0.8rem;
@@ -116,6 +135,14 @@ body {
   li {
     margin-left: 1rem;
   }
+}
+.id-step-container {
+  display: none;
+  margin: 0 0.8rem;
+  margin-top: 0.8rem;
+}
+.show {
+  display: block;
 }
 .step-container {
   display: block;

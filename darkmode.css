@@ -143,6 +143,20 @@
       color: var(--white-palette);
     }
   }
+  .id-tab {
+    border: none;
+    border-bottom: 1px solid var(--gold-palette);
+    background-color: #b3a96e;
+    color: var(--dark-palette);
+   }
+  .id-tab:first-of-type {
+    border-right: 1px solid var(--gold-palette);
+  }
+  .selected {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--white-palette);
+  }
   .container {
     background-color: var(--dark-palette);
   }
