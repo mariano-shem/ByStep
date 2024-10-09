@@ -186,6 +186,10 @@
       color: var(--gold-palette);
       background-color: var(--dark-palette);
     }
+    .finish-button {
+      color: var(--dark-palette);
+      background-color: var(--gold-palette);
+    }
   }
   .active {/*crucial shit*/
     .accordion-header {

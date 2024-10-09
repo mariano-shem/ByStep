@@ -235,7 +235,7 @@ body {
     .finish-button {
       border-style: none;
       border-radius: 5px;
-      background-color: rgb(56, 130, 56);
+      background-color: #333399;
       color: white;
       cursor: pointer;
     }
