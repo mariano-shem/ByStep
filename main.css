@@ -183,6 +183,16 @@ a {
   margin-left: 0.8rem;
   display: none;
 }
+.help-btn {
+  > i {
+    content: url(assets/ico/light-mode/help.svg);
+    display: block;
+    height: 2rem;
+  }
+  position: absolute;
+  margin-right: 0.8rem;
+  right: 0;
+}
 .search {
   display: flex;
   height: 2.5rem;

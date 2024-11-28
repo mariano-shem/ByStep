@@ -1,0 +1,148 @@
+:root {
+  --purewhite-svg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
+  --mainblue-svg: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(1541%) hue-rotate(223deg) brightness(97%) contrast(104%);
+  --mainblue: #333399;
+  --subblue: #7da7d9;
+  --smokewhite: #f3f4f6;
+}
+body {
+}
+a {
+  text-decoration: none;
+  color: var(--mainblue);
+}
+p, span, strong, em {
+  font-family: "DM-Sans-Regular", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+ul, ol {
+  padding-left: 2rem;
+  span {
+    position: relative;
+    left: 0.5rem;
+  }
+  li {
+    list-style-position: outside;
+    list-style-type: upper-roman;
+  }
+}
+p, ul, ol {
+  padding-top: 1rem;
+}
+h3 {
+  padding-bottom: 0.5rem;
+  color: #333399;
+}
+img {
+  width: 100%;
+  padding: 1rem 0;
+  max-width: 600px;
+}
+.manual-page {
+  background-color: #F3F4F6;
+  background-image: none;
+  padding-top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.manual-header {
+  h3 {
+    padding-bottom: 0;
+    color: #F3F4F6;
+  }
+  img {
+    padding: 0;
+  }
+}
+.manual-title {
+  color: #F3F4F6;
+}
+.manual-body {
+  padding: 2rem;
+  padding-top: 1rem;
+}
+.um-section {
+  display: block;
+  width: 100%;
+  >div {
+    padding: 1rem;
+  }
+  h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul, ol {
+    padding-left: 1rem;
+  }
+  li {
+    list-style-type: decimal;
+    list-style-position: outside;
+  }
+  /* li::before {
+    counter-increment: section;
+    content: counter(section) ".";
+    text-align: center;
+
+  } */
+}
+.introduction {
+  padding: 1rem;
+  p {
+    padding-top: 0;
+  }
+}
+.table-of-contents {
+  h3 {
+    border: none;
+  }
+  ul {
+    padding-top: 0;
+    padding-left: 0;
+    li {
+      list-style-type: upper-roman;
+      list-style-position: inside;
+    }
+  }
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+.list-legend {
+  display: block;
+  counter-reset: section;
+  padding-left: 1rem;
+  position: relative;
+  li {
+    list-style-type: none;
+    padding: 0.1rem 0;
+  }
+  li::before {
+    counter-increment: section;
+    content: counter(section);
+    color: #F3F4F6;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    left: -0.6rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 1px solid red;
+    border-radius: 100%;
+    text-align: center;
+
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+}
+@media only screen and (min-width: 1025px) {
+  body {
+    display: block;
+  }
+
+  .manual-page {
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+}

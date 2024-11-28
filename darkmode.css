@@ -43,10 +43,7 @@
   .header {
     background-color: var(--dark-palette);
   }
-  .sidebar-open {
-    filter: var(--gold);
-  }
-  .applogo {
+  .sidebar-open, .applogo, .help-btn {
     filter: var(--gold);
   }
   .search-bar:focus {
@@ -127,7 +124,7 @@
     }
   }
 /*================PROCESS CSS===================*/
-  .process-header {
+  .process-header, .glossary-header, .manual-header {
     background-image: url(assets/gallery/480p/processheaderdark-mobile.png);
     background-color: var(--gold-palette);
     color: var(--dark-palette);
@@ -135,7 +132,7 @@
       filter: var(--dark);
     }
   }
-  .process-title {
+  .process-title, .manual-title {
     color: var(--dark-palette);
   }
   .procedure {
@@ -226,6 +223,9 @@
     background-color: var(--gold-palette);
     color: var(--dark-palette);
   }
+  .glossary-title {
+    color: var(--dark-palette);
+  }
   .group-section {
     color: var(--white-palette);
   }
@@ -240,13 +240,41 @@
   }
   .highlight {
     background-color: var(--gold-palette);
-    > .term-title {
-      color: var(--dark-palette);
+    > .description {
+      > .term-title {
+        color: var(--dark-palette);
+      }
+      > .term-desc {
+        color: var(--dark-palette);
+      }
     }
-    > .term-desc {
+  }
+
+  /*=-=-=-=-=-=-=-=-USER MANUAL CSS=-=-=-=-=-=-=-=-=-=-*/
+  .manual-page {
+    background-color: var(--dark-palette);
+    background-image: none;
+  }
+  .manual-header {
+    h3 {
       color: var(--dark-palette);
     }
   }
+  .manual-body {
+    h3 {
+      color: var(--gold-palette);
+    }
+    p, li {
+      color: var(--white-palette)
+    }
+  }
+  .table-of-contents {
+    li {
+      color: var(--gold-palette);
+    }
+    border: 1px solid var(--gold-palette);
+  }
+
 
   /*=-=-=-=-=-=-=-=RESPONSIVE SCREENS=-=-=-=-=-=-=-=*/
   @media only screen and (min-width: 481px) and (max-width: 1024px) {

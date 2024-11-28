@@ -63,7 +63,7 @@ body {
   height: 100vh;
   overflow-y: scroll;
 }
-.process-header {
+.process-header, .manual-header {
   position: relative;
   z-index: 1;
   background-image: url(assets/gallery/480p/processheader-mobile.png);
@@ -93,7 +93,7 @@ body {
       }
   }
   
-  .process-title {
+  .process-title, .manual-title {
     color: inherit;
     position: absolute;
     bottom: 0;
@@ -235,8 +235,8 @@ body {
     .finish-button {
       border-style: none;
       border-radius: 5px;
-      background-color: #333399;
-      color: white;
+      background-color: #e3d585;
+      color: #333399;
       cursor: pointer;
     }
   }
@@ -274,7 +274,7 @@ body {
   body {
     background-image: url(assets/gallery/768p/mainbg-tab.png);
   }
-  .process-header {
+  .process-header, .manual-header {
     background-image: url(assets/gallery/768p/processheader-tab.png);
   }
 }
@@ -298,7 +298,7 @@ body {
       }
     }
   }
-  .process-header {
+  .process-header, .manual-header {
     margin: 0 auto;
     background-image: url(assets/gallery/1152p/processheader-desktop.png);
     img {
