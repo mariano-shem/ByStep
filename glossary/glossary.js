@@ -35,6 +35,35 @@ function repositionTerm() {
     }
   }
 }
+
+var tplImage = document.querySelectorAll(".tpl-img");
+const body = document.querySelector("body");
+var closeModal = document.querySelectorAll(".img-close");
+
+tplImage.forEach(
+  function(event) {
+  event.addEventListener("click", 
+    function() {
+      const modal = this.closest(".modal");
+      const fullImage = modal.querySelector(".full-img");
+      const modalImage = fullImage.querySelector(".img-content");
+      const captionText = fullImage.querySelector(".img-caption");
+      fullImage.style.display = "block";
+      modalImage.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+  )
+})
+
+closeModal.forEach(function(event) {
+  event.addEventListener("click", 
+    function() {
+      const fullImage = this.closest(".full-img");
+      fullImage.style.display = "none";
+    }
+  )
+})
+
 if(localStorage.getItem("darkMode") === "on") {
   document.querySelector("body").classList.add("toggledark");
 }
