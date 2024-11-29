@@ -115,6 +115,10 @@ body {
   border-bottom: 1px solid #333399;
   background-color: #7da7d9;
   color: #f3f4f6;
+  span {
+    font-size: 1.25rem;
+    font-family: "Poppins-Bold";
+  }
 }
 .id-tab:first-of-type {
   border-right: 1px solid #333399;

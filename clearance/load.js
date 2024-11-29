@@ -19,7 +19,6 @@ async function loadAccordionContents() {
       document.getElementById("head-9").innerHTML = doc.querySelector("#head-9").innerHTML;
       document.getElementById("head-10").innerHTML = doc.querySelector("#head-10").innerHTML;
       document.getElementById("head-11").innerHTML = doc.querySelector("#head-11").innerHTML;
-      document.getElementById("head-12").innerHTML = doc.querySelector("#head-12").innerHTML;
       //every line represent a content of a process page
       document.getElementById("content-1").innerHTML = doc.querySelector("#content-1").innerHTML;
       document.getElementById("content-2").innerHTML = doc.querySelector("#content-2").innerHTML;
@@ -32,7 +31,6 @@ async function loadAccordionContents() {
       document.getElementById("content-9").innerHTML = doc.querySelector("#content-9").innerHTML;
       document.getElementById("content-10").innerHTML = doc.querySelector("#content-10").innerHTML;
       document.getElementById("content-11").innerHTML = doc.querySelector("#content-11").innerHTML;
-      document.getElementById("content-12").innerHTML = doc.querySelector("#content-12").innerHTML;
       
       
     } else {
