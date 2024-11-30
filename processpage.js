@@ -121,7 +121,7 @@ finishButton.forEach(
     button.addEventListener("click", 
     function(button) {
       button.preventDefault();
-      confirmExit("Finish Process?", 
+      confirmExit("Confirm Finish?", 
         "This will take you back to the home page.", 
         "Cancel", 
         "Confirm",
