@@ -188,7 +188,7 @@
       background-color: var(--gold-palette);
     }
   }
-  .active {/*crucial shit*/
+  .active {/*crucial stuff*/
     .accordion-header {
       opacity: 1;
     }

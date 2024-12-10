@@ -239,8 +239,8 @@ body {
     .finish-button {
       border-style: none;
       border-radius: 5px;
-      background-color: #e3d585;
-      color: #333399;
+      background-color: #333399;
+      color: #f3f4f6;
       cursor: pointer;
     }
   }
