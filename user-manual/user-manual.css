@@ -12,7 +12,7 @@ a {
   color: var(--mainblue);
 }
 p, span, strong, em {
-  font-family: "DM-Sans-Regular", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "DM-Sans-Regular", sans-serif;
   font-size: 1rem;
 }
 ul, ol {

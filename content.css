@@ -11,14 +11,14 @@
 .content {
   p, ul, li, em, strong, a{
     font-size: 0.875rem;
-    font-family: "DM-Sans-Regular";
+    font-family: "DM-Sans-Regular", sans-serif;
   }
   a {
     color: var(--subblue);
   }
   h5 {
   font-size: 0.875rem;
-  font-family: "DM-Sans-Bold";
+  font-family: "DM-Sans-Bold", sans-serif;
   }
   li {
     padding-bottom: 0.5rem;

@@ -321,7 +321,7 @@ a {
       width: inherit;
       color: var(--mainblue);
       overflow-x: hidden;
-      font-family: "Poppins-Regular",  Helvetica, sans-serif;
+      font-family: "Poppins-Regular", Helvetica, sans-serif;
     }
   }
   > li:hover {
@@ -418,7 +418,7 @@ a {
 }
 .card-name {
   h4 {
-    font-family: "Poppins-Bold";
+    font-family: "Poppins-Bold", Helvetica, sans-serif;
     color: var(--mainblue);
   }
   margin-left: 0.75rem;
@@ -494,7 +494,7 @@ a {
       display: block;
       margin-left: 0.8rem;
       color: var(--mainblue);
-      font-family: "Poppins-Bold";
+      font-family: "Poppins-Bold", Helvetica, sans-serif;
     }
   }
   .toggledesktop {

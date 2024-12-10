@@ -23,7 +23,7 @@ body {
       color: #333399;
     }
     p {
-      font-family: "DM-Sans-Regular";
+      font-family: "DM-Sans-Regular", sans-serif;
     }
   }
   .control-btns {
@@ -117,7 +117,7 @@ body {
   color: #f3f4f6;
   span {
     font-size: 1.25rem;
-    font-family: "Poppins-Bold";
+    font-family: "Poppins-Bold", Helvetica, sans-serif;
   }
 }
 .id-tab:first-of-type {
