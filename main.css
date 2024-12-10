@@ -387,7 +387,7 @@ a {
 }
 .card-name {
   h4 {
-    font-family: "Poppins-Bold", Helvetica, sans-serif;
+    font-family: "DM-Sans-Regular", sans-serif;
     color: var(--mainblue);
   }
   margin-left: 0.75rem;
