@@ -249,6 +249,14 @@
       }
     }
   }
+  .content {
+    a {
+      color: var(--gold-palette);
+    }
+  }
+  .elink {
+    filter: var(--gold);
+  }
 
   /*=-=-=-=-=-=-=-=-USER MANUAL CSS=-=-=-=-=-=-=-=-=-=-*/
   .manual-page {
