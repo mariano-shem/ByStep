@@ -46,6 +46,15 @@
   .sidebar-open, .applogo, .help-btn {
     filter: var(--gold);
   }
+  .android-icon {
+    filter: var(--dark);
+  }
+  .app-dl {
+    background-color: #e3d585;
+    span {
+      color: #121212;
+    }
+  }
   .search-bar:focus {
     outline-color: var(--gold-palette);
     outline-width: medium;
